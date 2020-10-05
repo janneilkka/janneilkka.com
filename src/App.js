@@ -14,6 +14,7 @@ import IconBox from "./components/icon-box";
 import IconText from "./components/icon-text";
 import Page from "./components/page";
 import Janne_pixelated from "./janne_pixelated.png";
+import ReactPlayer from "react-player";
 
 const MODAL_DEFAULT_POSITION = { x: 60, y: 50 };
 
@@ -36,6 +37,13 @@ const SOCIAL_ANCHORS_LIST = [
 ];
 
 const Home = () => {
+  useEffect(() => {
+    setShowSkillsModal(false);
+    setShowPhotoModal(false);
+    setShowCVModal(false);
+    setShowVaporwaveModal(false);
+  }, []);
+
   const [showAboutModal, setShowAboutModal] = useState(true);
   const handleOpenAboutModal = useCallback(() => {
     setShowAboutModal(true);
@@ -60,11 +68,6 @@ const Home = () => {
     setShowCVModal(false);
   }, []);
 
-  useEffect(() => {
-    setShowSkillsModal(false);
-    setShowCVModal(false);
-  }, []);
-
   const [showPhotoModal, setShowPhotoModal] = useState(true);
   const handleOpenPhotoModal = useCallback(() => {
     setShowPhotoModal(true);
@@ -73,9 +76,12 @@ const Home = () => {
     setShowPhotoModal(false);
   }, []);
 
-  useEffect(() => {
-    setShowSkillsModal(false);
-    setShowPhotoModal(false);
+  const [showVaporwaveModal, setShowVaporwaveModal] = useState(true);
+  const handleOpenVaporwaveModal = useCallback(() => {
+    setShowVaporwaveModal(true);
+  }, []);
+  const handleCloseVaporwaveModal = useCallback(() => {
+    setShowVaporwaveModal(false);
   }, []);
 
   return (
@@ -110,6 +116,7 @@ const Home = () => {
           <Icon name="shell32_36" />
           <IconText>prototypes_wireframes.pdf</IconText>
         </IconBox>
+
         {showAboutModal && (
           <Modal
             closeModal={handleCloseAboutModal}
@@ -167,6 +174,7 @@ const Home = () => {
             </Frame>
           </Modal>
         )}
+
         {showSkillsModal && (
           <Modal
             closeModal={handleCloseSkillsModal}
@@ -253,6 +261,7 @@ const Home = () => {
             </Frame>
           </Modal>
         )}
+
         {showCVModal && (
           <Modal
             closeModal={handleCloseCVModal}
@@ -395,6 +404,51 @@ const Home = () => {
             <p>janne_compressed.jpeg</p>
           </Modal>
         )}
+        {showVaporwaveModal && (
+          <Modal
+            closeModal={handleCloseVaporwaveModal}
+            defaultPosition={MODAL_DEFAULT_POSITION}
+            height="100%"
+            icon="cd_music"
+            menu={[
+              {
+                name: "Options",
+                list: (
+                  <List>
+                    <List.Item
+                      as="a"
+                      href="mailto:janne.ilkka@gmail.com"
+                      target="_blank"
+                    >
+                      Contact me
+                    </List.Item>
+                    <List.Divider />
+                    <List.Item onClick={handleCloseVaporwaveModal}>
+                      Close
+                    </List.Item>
+                  </List>
+                ),
+              },
+            ]}
+            title="Tunes"
+            width={680}
+          >
+            <Frame
+              boxShadow="in"
+              height={380}
+              padding={10}
+              style={{
+                overflowY: "auto",
+                overflowX: "auto",
+              }}
+            >
+              <div>
+                <ReactPlayer width="100%" url="https://youtu.be/vwnAeIsg3as" />
+              </div>
+            </Frame>
+          </Modal>
+        )}
+
         <TaskBar
           list={
             <List>
@@ -422,6 +476,9 @@ const Home = () => {
                     </List.Item>
                   ))}
                 </List>
+              </List.Item>
+              <List.Item icon="cd_music" onClick={handleOpenVaporwaveModal}>
+                Tunes
               </List.Item>
               <List.Item icon="user" onClick={handleOpenPhotoModal}>
                 Janne

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://janneilkka.github.io/janneilkka.com",
+  "homepage": "https://janneilkka.github.io/",
   "name": "create-react-app",
   "version": "0.1.0",
   "private": true,
@@ -8,14 +8,13 @@
     "@react95/icons": "latest",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
+    "react-player": "^2.6.2",
+    "react-scripts": "^3.4.3",
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test"
