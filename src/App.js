@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import {
   Icon,
   List,
@@ -8,29 +8,30 @@ import {
   ProgressBar,
   GlobalStyle,
   ThemeProvider,
-} from '@react95/core';
-import { useState, useCallback } from 'react';
-import IconBox from './components/icon-box';
-import IconText from './components/icon-text';
-import Page from './components/page';
+} from "@react95/core";
+import { useState, useCallback } from "react";
+import IconBox from "./components/icon-box";
+import IconText from "./components/icon-text";
+import Page from "./components/page";
+import Janne_pixelated from "./janne_pixelated.png";
 
 const MODAL_DEFAULT_POSITION = { x: 60, y: 50 };
 
 const SOCIAL_ANCHORS_LIST = [
   {
-    icon: 'access_227',
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/janneilkka/',
+    icon: "access_227",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/janneilkka/",
   },
   {
-    icon: 'access_219',
-    name: 'Twitter',
-    url: 'https://twitter.com/janneilkka',
+    icon: "access_219",
+    name: "Twitter",
+    url: "https://twitter.com/janneilkka",
   },
   {
-    icon: 'access_220',
-    name: 'Instagram',
-    url: 'https://instagram.com/janne.ilkka',
+    icon: "access_220",
+    name: "Instagram",
+    url: "https://instagram.com/janne.ilkka",
   },
 ];
 
@@ -62,6 +63,19 @@ const Home = () => {
   useEffect(() => {
     setShowSkillsModal(false);
     setShowCVModal(false);
+  }, []);
+
+  const [showPhotoModal, setShowPhotoModal] = useState(true);
+  const handleOpenPhotoModal = useCallback(() => {
+    setShowPhotoModal(true);
+  }, []);
+  const handleClosePhotoModal = useCallback(() => {
+    setShowPhotoModal(false);
+  }, []);
+
+  useEffect(() => {
+    setShowSkillsModal(false);
+    setShowPhotoModal(false);
   }, []);
 
   return (
@@ -104,7 +118,7 @@ const Home = () => {
             icon="progman_37"
             menu={[
               {
-                name: 'Options',
+                name: "Options",
                 list: (
                   <List>
                     <List.Item
@@ -129,10 +143,10 @@ const Home = () => {
               height="100%"
               padding={20}
               style={{
-                overflowY: 'auto',
+                overflowY: "auto",
               }}
             >
-              <h1>Hi!</h1>I am Janne, UX/UI Designer working at{' '}
+              <h1>Hi!</h1>I am Janne, UX/UI Designer working at{" "}
               <a href="www.solidabis.com">Solidabis Oy</a>
               <p>
                 I am working as a desinger, yet strengthening my coding skills
@@ -145,7 +159,7 @@ const Home = () => {
                 , an open-source Windows95 component library for React.
               </p>
               <p>
-                Should you be interested in seeing my portfolio, hit me an{' '}
+                Should you be interested in seeing my portfolio, hit me an{" "}
                 <a href="mailto:janne.ilkka@gmail.com">email</a> and I will send
                 the link and a password your way!
               </p>
@@ -161,7 +175,7 @@ const Home = () => {
             icon="mspaint"
             menu={[
               {
-                name: 'Options',
+                name: "Options",
                 list: (
                   <List>
                     <List.Item
@@ -180,7 +194,7 @@ const Home = () => {
               },
             ]}
             title="Skills"
-            width={400}
+            width={350}
           >
             <Frame
               bg="white"
@@ -188,8 +202,8 @@ const Home = () => {
               height={500}
               padding={40}
               style={{
-                overflowY: 'auto',
-                overflowX: 'auto',
+                overflowY: "auto",
+                overflowX: "auto",
               }}
             >
               <h1>Some of my skills</h1>
@@ -200,27 +214,29 @@ const Home = () => {
               </p>
               <h2>Design</h2>
               <h3>Adobe CC</h3>
-              <ProgressBar width={300} percent={90} />
+              <ProgressBar width={250} percent={90} />
               <h3>Sketch</h3>
-              <ProgressBar width={300} percent={85} />
+              <ProgressBar width={250} percent={85} />
               <h3>InVision</h3>
-              <ProgressBar width={300} percent={85} />
+              <ProgressBar width={250} percent={85} />
               <h3>WCAG 2.1</h3>
-              <ProgressBar width={300} percent={50} />
+              <ProgressBar width={250} percent={50} />
               <h3>Figma</h3>
-              <ProgressBar width={300} percent={40} />
+              <ProgressBar width={250} percent={40} />
               <br />
               <h2>Dev</h2>
               <h3>Storybook(JS)</h3>
-              <ProgressBar width={300} percent={70} />
+              <ProgressBar width={250} percent={70} />
               <h3>HTML, CSS, SASS</h3>
-              <ProgressBar width={300} percent={65} />
+              <ProgressBar width={250} percent={65} />
               <h3>Wordpress</h3>
-              <ProgressBar width={300} percent={60} />
+              <ProgressBar width={250} percent={60} />
               <h3>Raspberry Pi & Arduino</h3>
-              <ProgressBar width={300} percent={30} />
+              <ProgressBar width={250} percent={30} />
               <h3>Git</h3>
-              <ProgressBar width={300} percent={30} />
+              <ProgressBar width={250} percent={30} />
+              <h3>React</h3>
+              <ProgressBar width={250} percent={25} />
               <br />
               <h2>Other Skills</h2>
               <ul>
@@ -245,7 +261,7 @@ const Home = () => {
             icon="shdocvw_272"
             menu={[
               {
-                name: 'Options',
+                name: "Options",
                 list: (
                   <List>
                     <List.Item
@@ -262,7 +278,7 @@ const Home = () => {
               },
             ]}
             title="Curriculum Vitae"
-            width={400}
+            width={350}
           >
             <Frame
               bg="white"
@@ -270,8 +286,8 @@ const Home = () => {
               height={500}
               padding={40}
               style={{
-                overflowY: 'auto',
-                overflowX: 'auto',
+                overflowY: "auto",
+                overflowX: "auto",
               }}
             >
               <h1>(A Short) Curriculum Vitae</h1>
@@ -321,7 +337,7 @@ const Home = () => {
               <p>
                 International Baccalaureate degree at the United World College
                 Costa Rica as the Finnish Cultural Fund fellow and Finnish
-                repre-sentative.WebsiteLinkedInSend Email
+                repre-sentative.
               </p>
               <h2>Languages in order of strength</h2>
               <ul>
@@ -336,6 +352,47 @@ const Home = () => {
                 <li>Portuguese</li>
               </ul>
             </Frame>
+          </Modal>
+        )}
+        {showPhotoModal && (
+          <Modal
+            closeModal={handleClosePhotoModal}
+            defaultPosition={MODAL_DEFAULT_POSITION}
+            height="100%"
+            icon="user"
+            menu={[
+              {
+                name: "Options",
+                list: (
+                  <List>
+                    <List.Item
+                      as="a"
+                      href="mailto:janne.ilkka@gmail.com"
+                      target="_blank"
+                    >
+                      Contact me
+                    </List.Item>
+                    <List.Divider />
+                    <List.Item onClick={handleClosePhotoModal}>Close</List.Item>
+                  </List>
+                ),
+              },
+            ]}
+            title="Janne"
+            width={350}
+          >
+            <Frame
+              boxShadow="in"
+              height={350}
+              padding={40}
+              style={{
+                overflowY: "auto",
+                overflowX: "auto",
+              }}
+            >
+              <img height={250} src={Janne_pixelated} alt="This is Janne"></img>
+            </Frame>
+            <p>janne_compressed.jpeg</p>
           </Modal>
         )}
         <TaskBar
@@ -365,6 +422,9 @@ const Home = () => {
                     </List.Item>
                   ))}
                 </List>
+              </List.Item>
+              <List.Item icon="user" onClick={handleOpenPhotoModal}>
+                Janne
               </List.Item>
               <List.Item icon="shdocvw_272" onClick={handleOpenCVModal}>
                 CV
