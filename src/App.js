@@ -154,9 +154,9 @@ const Home = () => {
               }}
             >
               <h1>Hi!</h1>I am Janne, UX/UI Designer working at{" "}
-              <a href="www.solidabis.com">Solidabis Oy</a>
+              <a href="https://www.solidabis.com">Solidabis Oy</a>
               <p>
-                I am working as a desinger, yet strengthening my coding skills
+                I am working as a designer, yet strengthening my coding skills
                 in the front-end world as well - both through client projects as
                 well as as a hobby.
               </p>
