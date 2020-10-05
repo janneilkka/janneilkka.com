@@ -1,10 +1,10 @@
 {
-  "homepage": "http://janneilkka.github.io/janneilkka.com",
+  "homepage": "https://janneilkka.github.io/janneilkka.com",
   "name": "create-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react95/core": "latest",
+    "@react95/core": "^2.11.2",
     "@react95/icons": "latest",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -12,12 +12,13 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
