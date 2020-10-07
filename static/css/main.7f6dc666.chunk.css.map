@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,gBAGE,WACF,CAEA,KACE,QAAS,CACT,SAAU,CACV,wBACF","file":"main.7f6dc666.chunk.css","sourcesContent":["html,\nbody,\n#root {\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 13px !important;\n}\n"]}
