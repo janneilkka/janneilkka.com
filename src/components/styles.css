@@ -1,6 +1,7 @@
 .full-screen {
   display: flex;
-  width: stretch;
+  /* eslint-disable-next-line */
+  width: fill-available;
   min-height: 90.5vh;
   top: 0;
   left: 0;
@@ -21,7 +22,8 @@
 @media (max-width: 425px) {
   .responsive-modal {
     display: flex;
-    width: stretch;
+    /* eslint-disable-next-line */
+    width: fill-available;
     height: calc(100vh - 10vh);
     padding: 0;
     top: 0;

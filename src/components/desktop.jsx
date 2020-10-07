@@ -407,6 +407,7 @@ function Desktop() {
               <iframe
                 src="https://www.youtube.com/embed/7SyxEF-QG_M"
                 frameborder="0"
+                title="A Song from a Vaporwave Album"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
@@ -443,7 +444,11 @@ function Desktop() {
               overflowX: "auto",
             }}
           >
-            <Iframe className="full-screen" url="https://k00.fr/wpbbvrye" />
+            <Iframe
+              className="full-screen"
+              src="https://k00.fr/wpbbvrye"
+              title="A Song from a Vaporwave Album"
+            ></Iframe>
           </Frame>
         </Modal>
       )}
