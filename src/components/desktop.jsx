@@ -227,6 +227,7 @@ function Desktop() {
             bg="white"
             boxShadow="in"
             padding={40}
+            height={500}
             style={{
               overflowY: "auto",
               overflowX: "auto",
@@ -417,10 +418,9 @@ function Desktop() {
       )}
       {showPortfolioModal && (
         <Modal
-          className="full-screen"
           closeModal={handleClosePortfolioModal}
-          height="100%"
           icon="explorer_103"
+          height={600}
           menu={[
             {
               name: "Options",
@@ -439,6 +439,7 @@ function Desktop() {
             bg="none"
             boxShadow="in"
             className="styled-frame"
+            height={500}
             style={{
               overflowY: "auto",
               overflowX: "auto",
@@ -446,8 +447,8 @@ function Desktop() {
           >
             <Iframe
               className="full-screen"
-              src="https://k00.fr/wpbbvrye"
-              title="A Song from a Vaporwave Album"
+              src="http://k00.fr/wpbbvrye"
+              title="Portfolio"
             ></Iframe>
           </Frame>
         </Modal>
