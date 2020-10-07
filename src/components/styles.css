@@ -1,0 +1,35 @@
+.full-screen {
+  display: flex;
+  width: stretch;
+  min-height: 90.5vh;
+  top: 0;
+  left: 0;
+}
+
+.full-width-image {
+  height: 250px;
+  width: 250px;
+  top: 0;
+  left: 0;
+}
+
+.responsive-frame {
+  overflow: auto;
+  height: 450px;
+}
+
+@media (max-width: 425px) {
+  .responsive-modal {
+    display: flex;
+    width: stretch;
+    height: calc(100vh - 10vh);
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin: -3rem 4rem -2rem -3.6rem;
+  }
+  .responsive-frame {
+    padding: 6% 6% 6% 6%;
+    height: 80vh;
+  }
+}

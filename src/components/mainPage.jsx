@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import Box from './box';
+import Box from "./desktopBox";
 
 const PageProps = {
   children: PropTypes.node.isRequired,
@@ -10,7 +10,7 @@ const PageProps = {
   title: PropTypes.string,
 };
 
-const Page = ({ children, description = null, title = 'Janne Koivisto' }) => (
+const Page = ({ children, description = null, title = "Janne Koivisto" }) => (
   <>
     <Box as="main">{children}</Box>
   </>
