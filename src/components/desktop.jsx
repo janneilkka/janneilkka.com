@@ -10,7 +10,7 @@ import {
 } from "@react95/core";
 import Janne_pixelated from "../janne_pixelated.png";
 import socialMedia from "./socialMedia";
-import Iframe from "react-iframe";
+// import Iframe from "react-iframe";
 import "./styles.css";
 
 function Desktop() {
@@ -63,13 +63,13 @@ function Desktop() {
   }, []);
 
   /* Portfolio Modal */
-  const [showPortfolioModal, setShowPortfolioModal] = useState(false);
-  const handleOpenPortfolioModal = useCallback(() => {
-    setShowPortfolioModal(true);
-  }, []);
-  const handleClosePortfolioModal = useCallback(() => {
-    setShowPortfolioModal(false);
-  }, []);
+  // const [showPortfolioModal, setShowPortfolioModal] = useState(false);
+  // const handleOpenPortfolioModal = useCallback(() => {
+  //   setShowPortfolioModal(true);
+  // }, []);
+  // const handleClosePortfolioModal = useCallback(() => {
+  //   setShowPortfolioModal(false);
+  // }, []);
 
   return (
     <ThemeProvider>
@@ -416,7 +416,7 @@ function Desktop() {
           </Frame>
         </Modal>
       )}
-      {showPortfolioModal && (
+      {/* {showPortfolioModal && (
         <Modal
           closeModal={handleClosePortfolioModal}
           icon="explorer_103"
@@ -447,12 +447,12 @@ function Desktop() {
           >
             <Iframe
               className="full-screen"
-              src="http://k00.fr/wpbbvrye"
+              src="https://app.koofr.net/links/737200ad-b241-4184-a6bc-9d07a4cd4539"
               title="Portfolio"
             ></Iframe>
           </Frame>
         </Modal>
-      )}
+      )} */}
       <TaskBar
         list={
           <List>
@@ -492,7 +492,10 @@ function Desktop() {
               <List>
                 <List.Item
                   icon="explorer_103"
-                  onClick={handleOpenPortfolioModal}
+                  as="a"
+                  href="https://k00.fr/wpbbvrye"
+                  target="_blank"
+                  // onClick={handleOpenPortfolioModal}
                 >
                   View portfolio
                 </List.Item>
