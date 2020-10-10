@@ -8,4 +8,3 @@ const IconBox = styled(Box)({
 });
 
 export default IconBox;
-
