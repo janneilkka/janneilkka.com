@@ -336,7 +336,7 @@ function Desktop() {
           >
             <img
               src={Janne_pixelated}
-              alt="This is Janne as a pixelated image"
+              aria-hidden alt="Janne as a pixelated image"
               class="full-width-image"
             ></img>
           </Frame>

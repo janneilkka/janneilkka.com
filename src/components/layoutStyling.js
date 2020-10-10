@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
-import { Modal, Frame, GlobalStyle } from "@react95/core";
+import { Modal, Frame } from "@react95/core";
 
 export const layoutWrapper = styled.section``;
 
