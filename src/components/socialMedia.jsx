@@ -5,6 +5,11 @@ const socialMedia = [
     url: "https://www.linkedin.com/in/janneilkka/",
   },
   {
+    icon: "progman_13",
+    name: "Flickr",
+    url: "https://flickr.com/janneilkka",
+  },
+  {
     icon: "access_219",
     name: "Twitter",
     url: "https://twitter.com/janneilkka",

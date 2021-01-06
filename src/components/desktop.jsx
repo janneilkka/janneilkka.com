@@ -9,9 +9,6 @@ import {
 } from "@react95/core";
 import Janne_pixelated from "../janne_pixelated.png";
 import socialMedia from "./socialMedia";
-// import Iframe from "react-iframe";
-// import styled, { css } from "styled-components";
-// import media from "styled-media-query";
 import * as S from "./layoutStyling";
 import "./styles.scss";
 
@@ -118,12 +115,9 @@ function Desktop() {
                 <h1>Moikka!</h1>
                 <p>
                   I am Janne, UX/UI Designer working at{" "}
-                  <a href="https://www.solidabis.com">Solidabis Oy</a>
-                </p>
-                <p>
+                  <a href="https://www.solidabis.com">Solidabis Oy</a>, a rapidly growing Finnish IT-consultancy.
                   I am working as a designer, yet strengthening my coding skills
-                  in the front-end world as well - both through client projects
-                  as well as as a hobby.
+                  in the front-end world as well.
                 </p>
                 <p>
                   This app, sort of a playground of ideas, has been built with
@@ -131,6 +125,7 @@ function Desktop() {
                   <a href="https://github.com/React95/React95">React95</a>, an
                   open-source Windows95 component library for React.
                 </p>
+                <p>Oh and by the way, I made a <a href="https://www.figma.com/file/2cbigNitjcruBDZT12ixIq/React95-Design-Kit">Design Kit for React95</a>, check it out!</p>
               </div>
             </Frame>
           </S.layoutMainContent>
@@ -480,7 +475,7 @@ function Desktop() {
                   without detailed information on any of the projects to give
                   you a context of what I have been working on lately. If you
                   are interested in seeing any of the work I have done, please
-                  check out the visual portfolio as well.
+                  contact me for a visual portfolio as well.
                 </p>
                 <hr />
                 <h2>Maintenance website</h2>
@@ -737,32 +732,8 @@ function Desktop() {
                 </List.Item>
               </List>
             </List.Item>
-            <List.Item icon="explorer_103">
+            <List.Item icon="explorer_103" onClick={handleOpenPortfolioModal}>
               Portfolio
-              <List>
-                <List.Item
-                  icon="awfxcg32_1303"
-                  onClick={handleOpenPortfolioModal}
-                >
-                  View online portfolio
-                </List.Item>
-                <List.Item
-                  icon="explorer_103"
-                  as="a"
-                  href="https://k00.fr/wpbbvrye"
-                  target="_blank"
-                >
-                  View visual portfolio
-                </List.Item>
-                <List.Item
-                  icon="key"
-                  as="a"
-                  href="mailto:janne.ilkka@gmail.com?subject=Hi! I would like access to your Portfolio!&body=Hello, I would like access to your portfolio please."
-                  target="_blank"
-                >
-                  Request password
-                </List.Item>
-              </List>
             </List.Item>
             <List.Item icon="user" onClick={handleOpenPhotoModal}>
               Janne
