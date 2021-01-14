@@ -17,7 +17,7 @@ const desktopIcons = (
       </IconBox>
       <IconBox>
         <Icon name="progman_24" />
-        <IconText>design_ideas.BMP</IconText>
+        <IconText>design_ideas.bmp</IconText>
       </IconBox>
       <IconBox>
         <Icon name="progman_17" />

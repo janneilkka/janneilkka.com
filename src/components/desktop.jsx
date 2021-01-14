@@ -115,9 +115,10 @@ function Desktop() {
                 <h1>Moikka!</h1>
                 <p>
                   I am Janne, UX/UI Designer working at{" "}
-                  <a href="https://www.solidabis.com">Solidabis Oy</a>, a rapidly growing Finnish IT-consultancy.
-                  I am working as a designer, yet strengthening my coding skills
-                  in the front-end world as well.
+                  <a href="https://www.solidabis.com">Solidabis Oy</a>, a
+                  rapidly growing Finnish IT-consultancy. I am working as a
+                  designer, yet strengthening my coding skills in the front-end
+                  world as well.
                 </p>
                 <p>
                   This app, sort of a playground of ideas, has been built with
@@ -125,7 +126,13 @@ function Desktop() {
                   <a href="https://github.com/React95/React95">React95</a>, an
                   open-source Windows95 component library for React.
                 </p>
-                <p>Oh and by the way, I made a <a href="https://www.figma.com/file/2cbigNitjcruBDZT12ixIq/React95-Design-Kit">Design Kit for React95</a>, check it out!</p>
+                <p>
+                  Oh and by the way, I made a{" "}
+                  <a href="https://www.figma.com/file/2cbigNitjcruBDZT12ixIq/React95-Design-Kit">
+                    Design Kit for React95
+                  </a>
+                  , check it out!
+                </p>
               </div>
             </Frame>
           </S.layoutMainContent>
@@ -331,7 +338,8 @@ function Desktop() {
           >
             <img
               src={Janne_pixelated}
-              aria-hidden alt="Janne as a pixelated image"
+              aria-hidden
+              alt="Janne as a pixelated image"
               class="full-width-image"
             ></img>
           </Frame>
@@ -390,6 +398,7 @@ function Desktop() {
                 <iframe
                   src="https://www.youtube.com/embed/7SyxEF-QG_M"
                   frameborder="0"
+                  width="100%"
                   title="A Song from a Vaporwave Album"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
@@ -402,9 +411,8 @@ function Desktop() {
       {showVaporwaveModal2 && (
         <S.layoutMain
           isMobile={isMobile}
-          title={"Epic_Song.html"}
+          title={"Janne's_Ultimate_LoFi_House_Playlist.html"}
           closeModal={handleCloseVaporwaveModal2}
-          defaultPosition={(0, 0)}
           height="100%"
           icon="cd_music"
           menu={[
@@ -422,19 +430,17 @@ function Desktop() {
         >
           <Frame
             style={{
-              margin: "auto",
+              height: "300px",
             }}
           >
             <iframe
-              src="https://www.youtube.com/embed/vwnAeIsg3as"
+              src="https://open.spotify.com/embed/playlist/42lX7a4yx3rJJcDSimyS9S"
+              width="100%"
+              height="100%"
               frameborder="0"
-              allowfullscreen
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-              title="Artist: Home, song: Resonance - a slowed version of the song"
+              allowtransparency="true"
+              allow="encrypted-media"
+              title="The Ultimate Lo-Fi House Playlist on Spotify"
             ></iframe>
           </Frame>
         </S.layoutMain>
@@ -725,10 +731,10 @@ function Desktop() {
               Tunes
               <List>
                 <List.Item onClick={handleOpenVaporwaveModal1} icon="cd_music">
-                  My Alter Ego
+                  Janne's Vaporwave Story from 2018
                 </List.Item>
                 <List.Item onClick={handleOpenVaporwaveModal2} icon="cd_music">
-                  Epic Song from Internet
+                  Janne's Ultimate Lo-Fi House Playlist on Spotify
                 </List.Item>
               </List>
             </List.Item>

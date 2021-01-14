@@ -19,6 +19,11 @@ const socialMedia = [
     name: "Instagram",
     url: "https://instagram.com/janne.ilkka",
   },
+  {
+    icon: "cd_music",
+    name: "Spotify",
+    url: "https://open.spotify.com/user/rogergregor?si=tJ9S_FGJSf6UaTWhLmcBwQ",
+  },
 ];
 
 export default socialMedia;
