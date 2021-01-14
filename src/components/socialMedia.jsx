@@ -22,7 +22,7 @@ const socialMedia = [
   {
     icon: "cd_music",
     name: "Spotify",
-    url: "https://open.spotify.com/user/rogergregor?si=tJ9S_FGJSf6UaTWhLmcBwQ",
+    url: "https://open.spotify.com/user/rogergregor",
   },
 ];
 
