@@ -14,9 +14,10 @@ import "./styles.scss";
 
 function Desktop() {
   /* Mobile detection */
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
   /* About Modal */
   const [showAboutModal, setShowAboutModal] = useState(true);
@@ -115,10 +116,12 @@ function Desktop() {
                 <h1>Moikka!</h1>
                 <p>
                   I am Janne, UX/UI Designer working at{" "}
-                  <a href="https://www.solidabis.com">Solidabis Oy</a>, a
-                  rapidly growing Finnish IT-consultancy. I am working as a
-                  designer, yet strengthening my coding skills in the front-end
-                  world as well.
+                  <a href="https://s-ryhma.fi/en">SOK</a> (SOK Design), the
+                  largest retailing cooperative organization in Finland,
+                  focusing in the redesign and development of{" "}
+                  <a href="https://www.sokos.fi/fi/sokos">Sokos</a>. I am
+                  working as a designer, yet strengthening my coding skills in
+                  the front-end world as well.
                 </p>
                 <p>
                   This app, sort of a playground of ideas, has been built with
@@ -174,40 +177,42 @@ function Desktop() {
                   <h2>Design</h2>
                   <h3>Adobe CC</h3>
                   <ProgressBar width={250} percent={90} />
-                  <h3>Sketch</h3>
+                  <h3>Figma</h3>
                   <ProgressBar width={250} percent={85} />
-                  <h3>InVision</h3>
+                  <h3>Sketch, InVision</h3>
                   <ProgressBar width={250} percent={85} />
                   <h3>WCAG 2.1</h3>
-                  <ProgressBar width={250} percent={50} />
-                  <h3>Figma</h3>
-                  <ProgressBar width={250} percent={40} />
+                  <ProgressBar width={250} percent={75} />
                   <br />
                   <h2>Dev</h2>
                   <h3>Storybook(JS)</h3>
-                  <ProgressBar width={250} percent={70} />
+                  <ProgressBar width={250} percent={75} />
                   <h3>HTML, CSS, SASS</h3>
-                  <ProgressBar width={250} percent={65} />
+                  <ProgressBar width={250} percent={75} />
                   <h3>Wordpress</h3>
-                  <ProgressBar width={250} percent={60} />
-                  <h3>Raspberry Pi & Arduino</h3>
-                  <ProgressBar width={250} percent={30} />
+                  <ProgressBar width={250} percent={70} />
                   <h3>Git</h3>
+                  <ProgressBar width={250} percent={40} />
+                  <h3>Raspberry Pi & Arduino</h3>
                   <ProgressBar width={250} percent={30} />
                   <h3>React</h3>
                   <ProgressBar width={250} percent={25} />
+                  <h3>Vue</h3>
+                  <ProgressBar width={250} percent={15} />
                   <br />
                   <h2>Other Skills</h2>
                   <ul>
+                    <li>Design systems</li>
                     <li>User Interviews</li>
                     <li>User Testing</li>
                     <li>Wireframing and prototyping</li>
                     <li>Visual design</li>
                     <li>Research</li>
                     <li>Copywriting and Social Media</li>
-                    <li>Content Creation</li>
+                    <li>Content creation</li>
                     <li>Workshops</li>
                     <li>Facilitation</li>
+                    <li>Concept creation</li>
                   </ul>
                 </p>
               </div>
@@ -245,30 +250,45 @@ function Desktop() {
               <div class="text-content">
                 <h1>Curriculum Vitae</h1>
                 <p>
-                  UX/UI design, usability, facilitation and research. These are
-                  some of the keywords that describe my interests and know-how.
-                  I have a long work history in communication and user-centered
-                  design. With my futuristic and social mind, I shine in duties
-                  where I get to use my social skills and design talents in
-                  practice.
+                  UX/UI design, design systems, usability and user-centered
+                  design. These are some of the keywords that describe my
+                  interests and know-how. I have a long work history in
+                  communication and user-centered design. With my futuristic and
+                  social mind, I shine in duties where I get to use my social
+                  skills and design talents in practice.
                 </p>
                 <h2>Latest Work History</h2>
+                <h3>UX Designer - S-group </h3>
+                <p>
+                  Developing a new <a href="https://sokos.fi">Sokos.fi</a>{" "}
+                  webstore and driving user-centric design within the community.
+                  Alongside Sokos development, participating in internal design
+                  system development and internal design processes.
+                </p>
                 <h3>UX/UI Designer - Solidabis Oy </h3>
                 <p>
                   Design and UX consultant work focusing on the public sector
                   clients and design systems. One of the biggest achievements
                   was a Storybook-based styleguide which I coded, designed and
                   made from scratch as a one person team with minimal budget.
-                  Part-time managing Solidabis marketing strategy.
+                  Part-time managing Solidabis marketing strategy, during which
+                  I single handedly redesigned and redeveloped{" "}
+                  <a href="https://solidabis.com">
+                    Solidabis' Wordpress-based website
+                  </a>{" "}
+                  using the Genesis framework and coding a custom theme on PHP,
+                  CSS and HTML.
                 </p>
-                <h3>UX/UI Designer - IBM </h3>
+                <h3>Junior UX/UI Designer - IBM </h3>
                 <p>
                   UI development, front-end collaboration, visual and graphic
                   design. Client cooperation and usability assessments of
                   implemented products daily. One of the greatest
-                  accomplishments was to get my team to use the Carbon design
-                  system, therefore increasing consistency and scaling with
-                  demos.
+                  accomplishments was to get my team to use the{" "}
+                  <a href="https://carbondesignsystem.com">
+                    Carbon design system
+                  </a>
+                  , therefore increasing consistency and scaling with demos.
                 </p>
                 <h2>Education</h2>
                 <h3>Master of Arts in New Media - Aalto University</h3>
@@ -482,6 +502,50 @@ function Desktop() {
                   you a context of what I have been working on lately. If you
                   are interested in seeing any of the work I have done, please
                   contact me for a visual portfolio as well.
+                </p>
+                <hr />
+                <h2>Website redesign & development</h2>
+                <h3>Solidabis</h3>
+                <span>Role: Designer/Developer</span>
+                <p>
+                  <h4>Background</h4>
+                  The Wordpress-based website of Solidabis Solutions Oy had been
+                  deprecated style-wise and technically, using a theme that did
+                  not serve the users (editors) and viewers (potential
+                  customers, existing customers) well. Bulky and heavy font
+                  selections, unreadable texts, alignment issues and heavy load
+                  times were dragging the user experience. Moreover, a few
+                  vulnerabilities in the the theme had caused an issue for
+                  potential blacklisting of IP:s for frequent visitors.
+                  <h4>Solution</h4>
+                  As a solution, I redesigned the website entirely, using a
+                  Wordpress framework (Genesis) for which I developed a child
+                  theme, to align with the new styles and to give a brighter,
+                  more current look for the website. I redeveloped the website
+                  using PHP with basic HTML5 and CSS/SASS to stylize the
+                  website. After that, I designed and created new content for
+                  the website, including some iconography, plenty of copywriting
+                  and photography.
+                </p>
+                <hr />
+                <h2>Accessibility audit</h2>
+                <h3>Ruskeat tytöt</h3>
+                <span>Role: Accessibility expert (pro bono)</span>
+                <p>
+                  <h4>Background</h4>
+                  Ruskeat Tytöt Media was updating their website and I offered
+                  to help them out pro bono to respond to accessibility issues
+                  and identify possible solutions to existing problems. Ruskeat
+                  Tytöt Media is an independent online publication committed to
+                  centering and normalizing the perspectives of Brown women and
+                  people with underrepresented genders in Finnish and Nordic
+                  media. Ruskeat Tytöt Media is Finland’s first culture media
+                  [and writing academy] for Brown Girls by Brown Girls.
+                  <h4>Solution</h4>
+                  Using the WCAG 2.1 guidelines, I audited the website during
+                  and after development, during which I drafted guidelines for
+                  how to solve problems with accessibility. As a deliverable, I
+                  also provided an accessibility report, found on their website.
                 </p>
                 <hr />
                 <h2>Maintenance website</h2>
