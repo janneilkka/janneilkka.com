@@ -317,7 +317,6 @@ function Desktop() {
           </S.textModal>
         </S.layoutMain>
       )}
-
       <TaskBar
         list={
           <List>
