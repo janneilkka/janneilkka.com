@@ -1,7 +1,6 @@
 import React from "react";
-
+import "./styles.scss";
 import PropTypes from "prop-types";
-
 import Box from "./desktopBox";
 
 const PageProps = {
@@ -9,13 +8,10 @@ const PageProps = {
   description: PropTypes.string,
   title: PropTypes.string,
 };
-const Background = {
-  backgroundColor: "#deabcc",
-};
 
 const Page = ({ children, description = null, title = "Janne Koivisto" }) => (
   <>
-    <body style={Background}>
+    <body class="background">
       <Box as="main">{children}</Box>
     </body>
   </>

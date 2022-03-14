@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&display=swap");
 
 .text-content {
   h1,
@@ -7,8 +7,8 @@
   h4,
   h5,
   h6 {
-    font-family: "Arimo", sans-serif;
-    font-weight: 700;
+    font-family: "Martel", sans-serif;
+    font-weight: 800;
   }
 
   p,
@@ -16,12 +16,16 @@
   b,
   ul,
   li {
-    font-family: "Arimo", sans-serif;
+    font-family: "Martel", sans-serif;
+  }
+
+  a {
+    color: #ff8fa3;
   }
 
   span {
-    font-family: "Arimo", sans-serif;
-    font-weight: 700;
+    font-family: "Martel", sans-serif;
+    font-weight: 800;
     font-style: italic;
   }
   b::before {
@@ -58,5 +62,7 @@
 }
 
 .background {
-  background-color: #ffffff;
+  background-image: url("/bgnd.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

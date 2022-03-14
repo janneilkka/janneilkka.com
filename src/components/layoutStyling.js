@@ -29,3 +29,12 @@ export const layoutMainContent = styled(Frame)`
   max-height: 70vh;
   `}
 `;
+
+export const textModal = styled(Frame)`
+  background: #513d40;
+  color: #e0e0e0;
+  boxshadow: in;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+`;

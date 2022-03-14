@@ -25,6 +25,7 @@ import {
 } from "@react95/icons";
 import Portfolio from "./portfolio";
 import CV from "./cv";
+import Tunes from "./tunes";
 
 function Desktop() {
   /* Mobile detection */
@@ -71,21 +72,12 @@ function Desktop() {
     setShowVaporwaveModal1(false);
   }, []);
 
-  /* Vaporwave Modal 2 */
-  const [showVaporwaveModal2, setShowVaporwaveModal2] = useState(false);
-  const handleOpenVaporwaveModal2 = useCallback(() => {
-    setShowVaporwaveModal2(true);
-  }, []);
-  const handleCloseVaporwaveModal2 = useCallback(() => {
-    setShowVaporwaveModal2(false);
-  }, []);
-
   /* Portfolio Shortcut */
   const closePortfolio = () => {
     togglePortfolio(false);
   };
 
-  const openExlorer = () => {
+  const openPortfolio = () => {
     togglePortfolio(true);
   };
   const [explorerOpened, togglePortfolio] = useState(false);
@@ -101,6 +93,18 @@ function Desktop() {
   };
 
   const [cvOpened, toggleCV] = useState(false);
+
+  /* Tunes Shortcut */
+
+  const closeTunes = () => {
+    toggleTunes(false);
+  };
+
+  const openTunes = () => {
+    toggleTunes(true);
+  };
+
+  const [tunesOpened, toggleTunes] = useState(false);
 
   return (
     <ThemeProvider theme="rose">
@@ -122,18 +126,10 @@ function Desktop() {
             },
           ]}
         >
-          <S.layoutMainContent bg="white" boxShadow="in">
-            <Frame
-              bg="white"
-              boxShadow="in"
-              height="100%"
-              padding={20}
-              style={{
-                overflowY: "auto",
-              }}
-            >
+          <S.layoutMainContent bg="white" boxShadow="out">
+            <S.textModal>
               <div class="text-content">
-                <h1>Moikka!</h1>
+                <h1>Moikka! 👋</h1>
                 <p>
                   I am Janne, UX/UI Designer working at{" "}
                   <a href="https://s-ryhma.fi/en">SOK</a> (SOK Design), the
@@ -157,7 +153,7 @@ function Desktop() {
                   , check it out!
                 </p>
               </div>
-            </Frame>
+            </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
       )}
@@ -179,14 +175,7 @@ function Desktop() {
           ]}
         >
           <S.layoutMainContent bg="white" boxShadow="in">
-            <Frame
-              bg="white"
-              boxShadow="in"
-              padding={20}
-              style={{
-                overflowY: "auto",
-              }}
-            >
+            <S.textModal>
               <div class="text-content">
                 <p>
                   {" "}
@@ -236,7 +225,7 @@ function Desktop() {
                   </ul>
                 </p>
               </div>
-            </Frame>
+            </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
       )}
@@ -296,14 +285,7 @@ function Desktop() {
           ]}
           title="My_Alter_Ego.doc"
         >
-          <Frame
-            bg="white"
-            boxShadow="in"
-            padding={10}
-            style={{
-              overflowX: "auto",
-            }}
-          >
+          <S.textModal>
             <div class="text-content">
               <h1>A Vaporwave Album</h1>
               <p>
@@ -332,46 +314,10 @@ function Desktop() {
                 ></iframe>
               </div>
             </div>
-          </Frame>
+          </S.textModal>
         </S.layoutMain>
       )}
-      {showVaporwaveModal2 && (
-        <S.layoutMain
-          isMobile={isMobile}
-          title={"Janne's_Ultimate_LoFi_House_Playlist.html"}
-          closeModal={handleCloseVaporwaveModal2}
-          height="100%"
-          icon={<CdMusic variant="32x32_4" />}
-          menu={[
-            {
-              name: "Options",
-              list: (
-                <List>
-                  <List.Item onClick={handleCloseVaporwaveModal2}>
-                    Close
-                  </List.Item>
-                </List>
-              ),
-            },
-          ]}
-        >
-          <Frame
-            style={{
-              height: "300px",
-            }}
-          >
-            <iframe
-              src="https://open.spotify.com/embed/playlist/42lX7a4yx3rJJcDSimyS9S"
-              width="100%"
-              height="100%"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="The Ultimate Lo-Fi House Playlist on Spotify"
-            ></iframe>
-          </Frame>
-        </S.layoutMain>
-      )}
+
       <TaskBar
         list={
           <List>
@@ -410,12 +356,6 @@ function Desktop() {
                 >
                   Janne's Vaporwave Story from 2018
                 </List.Item>
-                <List.Item
-                  onClick={handleOpenVaporwaveModal2}
-                  icon={<CdMusic variant="32x32_4" />}
-                >
-                  Janne's Ultimate Lo-Fi House Playlist on Spotify
-                </List.Item>
               </List>
             </List.Item>
             <List.Item
@@ -441,7 +381,11 @@ function Desktop() {
         }
       />
       <React.Fragment>
-        <Shortcuts openPortfolio={openExlorer} openCV={openCV} />
+        <Shortcuts
+          openPortfolio={openPortfolio}
+          openCV={openCV}
+          openTunes={openTunes}
+        />
         {explorerOpened && (
           <Portfolio
             items={items}
@@ -450,6 +394,9 @@ function Desktop() {
           />
         )}
         {cvOpened && <CV items={items} closeCV={closeCV} isMobile={isMobile} />}
+        {tunesOpened && (
+          <Tunes items={items} closeTunes={closeTunes} isMobile={isMobile} />
+        )}
       </React.Fragment>
     </ThemeProvider>
   );

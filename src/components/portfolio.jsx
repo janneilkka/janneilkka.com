@@ -7,7 +7,7 @@ function Portfolio({ closePortfolio, isMobile }) {
   return (
     <S.layoutMain
       isMobile={isMobile}
-      title={"Portfolio_short_2020.txt"}
+      title={"Portfolio.txt"}
       closeModal={closePortfolio}
       height="100%"
       icon={<Explorer103 variant="32x32_4" />}
@@ -23,14 +23,7 @@ function Portfolio({ closePortfolio, isMobile }) {
       ]}
     >
       <S.layoutMainContent bg="white" boxShadow="in">
-        <Frame
-          bg="white"
-          boxShadow="in"
-          padding={20}
-          style={{
-            overflowY: "auto",
-          }}
-        >
+        <S.textModal>
           <div class="text-content">
             <h1>Short Portfolio</h1>
             <p>
@@ -286,7 +279,7 @@ function Portfolio({ closePortfolio, isMobile }) {
               accounts.
             </p>
           </div>
-        </Frame>
+        </S.textModal>
       </S.layoutMainContent>
     </S.layoutMain>
   );

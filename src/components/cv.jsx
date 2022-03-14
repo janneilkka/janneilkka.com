@@ -24,14 +24,7 @@ function CV({ closeCV, isMobile }) {
       ]}
     >
       <S.layoutMainContent bg="white" boxShadow="in">
-        <Frame
-          bg="white"
-          boxShadow="in"
-          padding={20}
-          style={{
-            overflowY: "auto",
-          }}
-        >
+        <S.textModal>
           <div class="text-content">
             <h1>Curriculum Vitae</h1>
             <p>
@@ -112,7 +105,7 @@ function CV({ closeCV, isMobile }) {
               <li>Portuguese</li>
             </ul>
           </div>
-        </Frame>
+        </S.textModal>
       </S.layoutMainContent>
     </S.layoutMain>
   );

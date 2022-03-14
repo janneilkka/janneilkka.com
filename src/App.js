@@ -7,9 +7,7 @@ import DesktopIcons from "./components/desktopIcons";
 const Home = () => {
   return (
     <ThemeProvider>
-      <GlobalStyle>
-        <body style={{ backgroundColor: "red" }}></body>
-      </GlobalStyle>
+      <GlobalStyle></GlobalStyle>
       <Page>
         <Desktop></Desktop>
         {DesktopIcons}
