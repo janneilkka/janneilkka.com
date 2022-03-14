@@ -9,10 +9,15 @@ const PageProps = {
   description: PropTypes.string,
   title: PropTypes.string,
 };
+const Background = {
+  backgroundColor: "#deabcc",
+};
 
 const Page = ({ children, description = null, title = "Janne Koivisto" }) => (
   <>
-    <Box as="main">{children}</Box>
+    <body style={Background}>
+      <Box as="main">{children}</Box>
+    </body>
   </>
 );
 

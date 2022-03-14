@@ -1,38 +1,27 @@
 import React from "react";
-import { Icon, GlobalStyle, ThemeProvider } from "@react95/core";
+import { GlobalStyle, ThemeProvider } from "@react95/core";
 import IconBox from "./iconBox";
 import IconText from "./iconText";
+import "./styles.scss";
+import { Awfxcg321303, Progman11 } from "@react95/icons";
 
-const desktopIcons = (
-  <>
-    <ThemeProvider>
-      <GlobalStyle></GlobalStyle>
-      <IconBox>
-        <Icon name="awfxcg32_1303" />
-        <IconText>user_interviews.doc</IconText>
-      </IconBox>
-      <IconBox>
-        <Icon name="shell32_39" />
-        <IconText>design_system_MASTER.fig</IconText>
-      </IconBox>
-      <IconBox>
-        <Icon name="progman_24" />
-        <IconText>design_ideas.bmp</IconText>
-      </IconBox>
-      <IconBox>
-        <Icon name="progman_17" />
-        <IconText>styles.scss</IconText>
-      </IconBox>
-      <IconBox>
-        <Icon name="access_110" />
-        <IconText>wcag_checklist.txt</IconText>
-      </IconBox>
-      <IconBox>
-        <Icon name="shell32_36" />
-        <IconText>prototypes_wireframes.pdf</IconText>
-      </IconBox>
-    </ThemeProvider>
-  </>
-);
+function Shortcuts({ openPortfolio, openCV }) {
+  return (
+    <div>
+      <ThemeProvider>
+        <GlobalStyle></GlobalStyle>
 
-export default desktopIcons;
+        <IconBox className="pointer" onClick={() => openPortfolio()}>
+          <Progman11 className="pointer" variant="32x32_4" />
+          <IconText className="pointer">Portfolio.txt</IconText>
+        </IconBox>
+        <IconBox className="pointer" onClick={() => openCV()}>
+          <Awfxcg321303 className="pointer" variant="32x32_4" />
+          <IconText className="pointer">CV.txt</IconText>
+        </IconBox>
+      </ThemeProvider>
+    </div>
+  );
+}
+
+export default Shortcuts;

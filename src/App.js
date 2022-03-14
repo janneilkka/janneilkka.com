@@ -2,15 +2,17 @@ import React from "react";
 import { GlobalStyle, ThemeProvider } from "@react95/core";
 import Page from "./components/mainPage";
 import Desktop from "./components/desktop";
-import desktopIcons from "./components/desktopIcons";
+import DesktopIcons from "./components/desktopIcons";
 
 const Home = () => {
   return (
     <ThemeProvider>
-      <GlobalStyle></GlobalStyle>
+      <GlobalStyle>
+        <body style={{ backgroundColor: "red" }}></body>
+      </GlobalStyle>
       <Page>
         <Desktop></Desktop>
-        {desktopIcons}
+        {DesktopIcons}
       </Page>
     </ThemeProvider>
   );
