@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react";
 import {
   GlobalStyle,
   ThemeProvider,
-  Themes,
   List,
   Frame,
   ProgressBar,
@@ -16,9 +15,7 @@ import "./styles.scss";
 import {
   Progman37,
   Mspaint,
-  Shdocvw257,
   User,
-  Explorer103,
   CdMusic,
   Progman34,
   Mail,
@@ -131,13 +128,15 @@ function Desktop() {
               <div class="text-content">
                 <h1>Moikka! 👋</h1>
                 <p>
-                  I am Janne, UX/UI Designer working at{" "}
-                  <a href="https://s-ryhma.fi/en">SOK</a> (SOK Design), the
-                  largest retailing cooperative organization in Finland,
-                  focusing in the redesign and development of{" "}
-                  <a href="https://www.sokos.fi/fi/sokos">Sokos</a>. I am
-                  working as a designer, yet strengthening my coding skills in
-                  the front-end world as well.
+                  I am Janne, a designer with a UX/UI focus working at{" "}
+                  <a href="https://hs.fi/">Helsingin Sanomat</a>, the largest
+                  subscription newspaper in the Nordics. I am working as a
+                  designer-developer at the moment, focusing on creating
+                  award-winning storytelling solutions with HS Data Desk. Check
+                  out{" "}
+                  <a href="https://www.hs.fi/aihe/datajournalismi/">
+                    some of our latest stories.
+                  </a>
                 </p>
                 <p>
                   This app, sort of a playground of ideas, has been built with
@@ -183,41 +182,41 @@ function Desktop() {
                   with numbers, percentages etc. - are skills really something
                   people can measure? However, here is a rough estimate of my
                   latest skills.
-                  <h2>Design</h2>
-                  <h3>Adobe CC</h3>
-                  <ProgressBar width={250} percent={90} />
+                  <h2>Design tools</h2>
                   <h3>Figma</h3>
+                  <ProgressBar width={250} percent={90} />
+                  <h3>Adobe CC</h3>
                   <ProgressBar width={250} percent={85} />
                   <h3>Sketch, InVision</h3>
                   <ProgressBar width={250} percent={85} />
                   <h3>WCAG 2.1</h3>
                   <ProgressBar width={250} percent={75} />
                   <br />
-                  <h2>Dev</h2>
+                  <h2>Dev tools</h2>
                   <h3>Storybook(JS)</h3>
                   <ProgressBar width={250} percent={75} />
                   <h3>HTML, CSS, SASS</h3>
                   <ProgressBar width={250} percent={75} />
-                  <h3>Wordpress</h3>
+                  <h3>Wordpress (PHP/Themes)</h3>
                   <ProgressBar width={250} percent={70} />
                   <h3>Git</h3>
-                  <ProgressBar width={250} percent={40} />
+                  <ProgressBar width={250} percent={60} />
                   <h3>Raspberry Pi & Arduino</h3>
                   <ProgressBar width={250} percent={30} />
                   <h3>React</h3>
-                  <ProgressBar width={250} percent={25} />
+                  <ProgressBar width={250} percent={30} />
                   <h3>Vue</h3>
                   <ProgressBar width={250} percent={15} />
                   <br />
                   <h2>Other Skills</h2>
                   <ul>
                     <li>Design systems</li>
-                    <li>User Interviews</li>
-                    <li>User Testing</li>
+                    <li>User interviews</li>
+                    <li>User testing</li>
                     <li>Wireframing and prototyping</li>
                     <li>Visual design</li>
                     <li>Research</li>
-                    <li>Copywriting and Social Media</li>
+                    <li>Copywriting and social Media</li>
                     <li>Content creation</li>
                     <li>Workshops</li>
                     <li>Facilitation</li>

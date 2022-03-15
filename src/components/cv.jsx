@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { Modal, Frame, List } from "@react95/core";
+import { List } from "@react95/core";
 import { Awfxcg321303 } from "@react95/icons";
 import * as S from "./layoutStyling";
 
@@ -36,7 +35,14 @@ function CV({ closeCV, isMobile }) {
               in practice.
             </p>
             <h2>Latest Work History</h2>
-            <h3>UX Designer - S-group </h3>
+            <h3>Designer/Developer - Helsingin Sanomat </h3>
+            <p>
+              Developing storytelling solutions, journalist tools and data
+              visualization at <a href="https://hs.fi">Helsingin Sanomat</a>.
+              Alongside Sokos development, participating in internal design
+              system development and internal design processes.
+            </p>
+            <h3>UX Designer - S-group / Sokos </h3>
             <p>
               Developing a new <a href="https://sokos.fi">Sokos.fi</a> webstore
               and driving user-centric design within the community. Alongside

@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { Modal, Frame, List } from "@react95/core";
-import { Awfxcg321303, CdMusic } from "@react95/icons";
+import { Frame, List } from "@react95/core";
+import { CdMusic } from "@react95/icons";
 import * as S from "./layoutStyling";
 
 function Tunes({ closeTunes, isMobile }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Frame, List } from "@react95/core";
+import { List } from "@react95/core";
 import { Explorer103 } from "@react95/icons";
 import * as S from "./layoutStyling";
 
@@ -32,6 +32,34 @@ function Portfolio({ closePortfolio, isMobile }) {
               of what I have been working on lately. If you are interested in
               seeing any of the work I have done, please contact me for a visual
               portfolio as well.
+            </p>
+            <hr />
+            <h2>Sokos beauty webstore</h2>
+            <h3>SOK Design</h3>
+            <span>Role: UX Designer</span>
+            <p>
+              <h4>Background</h4>
+              During my post as a designer for <a href="sokos.fi">Sokos</a>, I
+              was in charge of designing the whole UI for a new ecommerce
+              platform. This meant building a component library and whole UI
+              design from the ground up; defining and creating the color models,
+              typography rules, baseline grid, layout guidelines, variants and
+              statuses as well as UX models. The old platform had met the end of
+              its life cycle and thus, a new platform was custom-made.
+              <h4>Solution</h4>
+              After building a visual identity for the new platform, countless
+              Figma prototypes later, the goal was to create a beta store. In
+              the development of the beta store I positioned myself in several
+              roles. In close cooperation with the front and back-end devs we
+              started to add more layers onto the foundation built before. Using
+              a design system, for which I had built a theme using Typescript,
+              we aimed to scale the development and design to a more aligned
+              model. From user tests we concluded UX improvements that were done
+              as part of development. Alongside the ecommerce platform, one
+              project that is worth mentioning is the development of SOK Design
+              System. A rewarding experience in it was kickstarting work
+              regarding a consistent iconography with designers from several
+              parts of the organisation.
             </p>
             <hr />
             <h2>Website redesign & development</h2>
