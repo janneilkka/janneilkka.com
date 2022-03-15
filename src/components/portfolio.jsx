@@ -39,13 +39,13 @@ function Portfolio({ closePortfolio, isMobile }) {
             <span>Role: UX Designer</span>
             <p>
               <h4>Background</h4>
-              During my post as a designer for <a href="sokos.fi">Sokos</a>, I
-              was in charge of designing the whole UI for a new ecommerce
-              platform. This meant building a component library and whole UI
-              design from the ground up; defining and creating the color models,
-              typography rules, baseline grid, layout guidelines, variants and
-              statuses as well as UX models. The old platform had met the end of
-              its life cycle and thus, a new platform was custom-made.
+              During my post as a designer for Sokos, I was in charge of
+              designing the whole UI for a new ecommerce platform. This meant
+              building a component library and whole UI design from the ground
+              up; defining and creating the color models, typography rules,
+              baseline grid, layout guidelines, variants and statuses as well as
+              UX models. The old platform had met the end of its life cycle and
+              thus, a new platform was custom-made.
               <h4>Solution</h4>
               After building a visual identity for the new platform, countless
               Figma prototypes later, the goal was to create a beta store. In
