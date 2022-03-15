@@ -1,7 +1,6 @@
 import React from "react";
-
+import "./styles.scss";
 import PropTypes from "prop-types";
-
 import Box from "./desktopBox";
 
 const PageProps = {
@@ -12,7 +11,9 @@ const PageProps = {
 
 const Page = ({ children, description = null, title = "Janne Koivisto" }) => (
   <>
-    <Box as="main">{children}</Box>
+    <body class="background">
+      <Box as="main">{children}</Box>
+    </body>
   </>
 );
 

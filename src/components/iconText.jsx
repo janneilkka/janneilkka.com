@@ -9,6 +9,7 @@ const IconText = styled.p({
   textAlign: "center",
   breakAfter: "auto",
   wordBreak: "break-all",
+  color: "white",
 });
 
 export default IconText;

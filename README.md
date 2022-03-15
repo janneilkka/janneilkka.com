@@ -6,8 +6,8 @@ This little project is made with [React95](https://github.com/React95/React95) b
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
-### `yarn test`
+### `npm test`
 
-### `yarn build`
+### `npm build`
