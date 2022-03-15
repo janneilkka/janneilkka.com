@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bee4f74.css",
+    "main.css": "/static/css/main.8f0bae57.css",
     "main.js": "/static/js/main.934c500f.js",
     "static/media/bgnd.jpg": "/static/media/bgnd.c5ae0a189b024c83a3f9.jpg",
     "static/media/janne_pixelated.png": "/static/media/janne_pixelated.cd217e0bd1e2b7d9f1bb.png",
@@ -11,16 +11,16 @@
     "static/media/React95Video-Numbers.ttf": "/static/media/React95Video-Numbers.abf01d42c697853bc208.ttf",
     "static/media/MS-Sans-Serif.woff2": "/static/media/MS-Sans-Serif.4fb9ed0f3d81e2fccad0.woff2",
     "static/media/React95Video-Numbers.woff": "/static/media/React95Video-Numbers.cc52603db1ac08ac9d3b.woff",
-    "static/media/React95Video-Numbers.woff2": "/static/media/React95Video-Numbers.1b0c9ed82fb40976ab11.woff2",
     "index.html": "/index.html",
+    "static/media/React95Video-Numbers.woff2": "/static/media/React95Video-Numbers.1b0c9ed82fb40976ab11.woff2",
     "static/media/check.svg": "/static/media/check.cab94f089fae33556518400eea96707f.svg",
     "static/media/check-disabled.svg": "/static/media/check-disabled.6c74515b9665a58c67515a6b7d03ecec.svg",
     "static/media/rightcaret.svg": "/static/media/rightcaret.4316e9ffed3db2dabed84fe4f8329010.svg",
-    "main.8bee4f74.css.map": "/static/css/main.8bee4f74.css.map",
+    "main.8f0bae57.css.map": "/static/css/main.8f0bae57.css.map",
     "main.934c500f.js.map": "/static/js/main.934c500f.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bee4f74.css",
+    "static/css/main.8f0bae57.css",
     "static/js/main.934c500f.js"
   ]
 }
