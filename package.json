@@ -24,7 +24,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test"
   },
   "eslintConfig": {
