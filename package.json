@@ -9,13 +9,13 @@
     "@react95/icons": "^2.0.4",
     "babel-loader": "^8.1.0",
     "eslint": "^7.10.0",
-    "node-sass": "^7.0.1",
+    "node-sass": "^8.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-iframe": "^1.8.0",
     "react-player": "^2.6.2",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^4.0.3",
     "styled-components": "^4.4.1",
     "styled-media-query": "^2.1.2",
     "yarn": "^1.22.10"
@@ -23,7 +23,7 @@
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test"
   },

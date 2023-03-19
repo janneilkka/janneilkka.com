@@ -1,42 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&display=swap");
 
-.text-content {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Martel", sans-serif;
-    font-weight: 800;
-  }
-
-  p,
-  a,
-  b,
-  ul,
-  li {
-    font-family: "Martel", sans-serif;
-  }
-
-  a {
-    color: #ff8fa3;
-  }
-
-  span {
-    font-family: "Martel", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  b::before {
-    white-space: pre;
-    margin-top: 5px;
-  }
-  b::after {
-    margin-bottom: 1px;
-  }
-}
-
 .full-width-image {
   height: 250px;
   width: 250px;
@@ -62,8 +25,7 @@
 }
 
 .background {
-  background-image: url("/bgnd.jpg");
-  background-repeat: no-repeat;
+  background-image: url("/bgnd.png");
   background-size: cover;
-  background-color: #ff8fa3;
+  background-color: #000;
 }

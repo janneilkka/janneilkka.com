@@ -4,6 +4,10 @@ const socialMedia = [
     url: "https://www.linkedin.com/in/janneilkka/",
   },
   {
+    name: "Github",
+    url: "https://www.github.com/janneilkka/",
+  },
+  {
     name: "Flickr",
     url: "https://flickr.com/janneilkka",
   },
