@@ -143,10 +143,8 @@ function Desktop() {
                 >
                   React95
                 </a>
-                , an open-source Windows95 component library for React.
-              </p>
-              <p>
-                If you're interested in this project even further check out the{" "}
+                , an open-source Windows95 component library for React. If
+                you're interested in this project even further check out the{" "}
                 <a
                   href="https://www.figma.com/file/2cbigNitjcruBDZT12ixIq/React95-Design-Kit"
                   target="_blank"
