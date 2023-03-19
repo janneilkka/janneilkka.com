@@ -28,13 +28,41 @@ function Portfolio({ closePortfolio, isMobile }) {
             <h1>Short Portfolio</h1>
             <p>
               This is a shortened, non-visual version of my portfolio without
-              detailed information on any of the projects to give you a context
-              of what I have been working on lately. If you are interested in
-              seeing any of the work I have done, please contact me for a visual
-              portfolio as well.
+              detailed information the projects I have been working on. If you
+              are interested in seeing any of the work I have done in more
+              detail, please contact me for a visual portfolio.
             </p>
             <hr />
-            <h2>Sokos beauty webstore</h2>
+            <h2>The Election Machines</h2>
+            <h3>Sanoma Media Finland</h3>
+            <span>Role: Lead Designer</span>
+            <p>
+              <h4>Background</h4>
+              My main responsibility during my time at HS was to lead the design
+              of the renewal of the election machines (vaalikone in Finnish),
+              that is used by Helsingin Sanomat, Ilta-Sanomat and Aamulehti as
+              well as regional brands. The new election machines needed to serve
+              time well: use a consistent, well guided UX that is mainly used by
+              younger audiences on mobile devices on the app or browser. Use
+              cases would vary: from the urgent need for a candidate on the way
+              to a voting site to browsing heavily months prior to elections.
+              <h4>Solution</h4>
+              From early on, the focus was on creating a platform that could
+              last time well so we developed an in-house solution that had hints
+              of gamification; tiny rewards for users to make filling the form
+              as easy as possible. The election machine consisted of three user
+              interfaces: the candidate machine, election machine to the voters
+              and results service for election night. Design-wise the style was
+              taken to monochromatic direction using as high contrasts as
+              possible, giving homage to Nintendo-style gaming experience where
+              user has a set of controls and where progress feels more like a
+              game, rather than a set of questions. The main focus was on
+              customization: making the use of election machine as fast as
+              possible when time is of the essence to being able to dig in as
+              deep as possible and answering as many questions as user wants.
+            </p>
+            <hr />
+            <h2>Sokos ecommerce platform</h2>
             <h3>SOK Design</h3>
             <span>Role: UX Designer</span>
             <p>

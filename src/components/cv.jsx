@@ -27,27 +27,74 @@ function CV({ closeCV, isMobile }) {
           <div class="text-content">
             <h1>Curriculum Vitae</h1>
             <p>
-              UX/UI design, design systems, usability and user-centered design.
-              These are some of the keywords that describe my interests and
-              know-how. I have a long work history in communication and
-              user-centered design. With my futuristic and social mind, I shine
-              in duties where I get to use my social skills and design talents
-              in practice.
+              Product design, user-centered design methods and agile software
+              development. These are some of the keywords that describe my
+              interests and know-how. I have a long work history in
+              communication and user-centered design. With my futuristic and
+              social mind, I shine in duties where I get to use my social skills
+              and design talents in practice, such as in project management,
+              product design and product ownership.
             </p>
             <h2>Latest Work History</h2>
-            <h3>Designer/Developer - Helsingin Sanomat </h3>
+            <h3>Head of Design - Anyhau </h3>
             <p>
-              Developing storytelling solutions, journalist tools and data
-              visualization at <a href="https://hs.fi">Helsingin Sanomat</a>.
-              Alongside Sokos development, participating in internal design
-              system development and internal design processes.
+              A leadership role in taking charge of the new platform's design
+              for all of{" "}
+              <a
+                href="https://anyhau.fi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Anyhau
+              </a>{" "}
+              products for two user groups: pet owners and pet businesses.
+              Alongside leading the design and organizing daily design work,
+              having ownership in project management and organizing daily
+              ceremonies, as well as pruning the backlog and keeping focus for
+              the whole team.
+            </p>
+            <h3>Designer - Sanoma Media Finland Oy (HS Datadesk) </h3>
+            <p>
+              Maintaining and developing new storytelling solutions,
+              journalistic tools and data visualization at{" "}
+              <a href="https://hs.fi" target="_blank" rel="noopener noreferrer">
+                Helsingin Sanomat
+              </a>{" "}
+              Datadesk. Biggest project from the time at Sanoma was being the
+              design lead and principal designer for the{" "}
+              <a
+                href="https://vaalikone.fi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                election machines
+              </a>{" "}
+              for all Sanoma brands (Aamulehti, HS, Ilta-Sanomat, regional
+              brands). The election machine consists of three user interfaces:
+              the candidate machine, election machine to the voters and results
+              service for election night. Read more about the election machine{" "}
+              <a
+                href="https://www.vaalikone.fi/eduskunta2023/hs/faq"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                here
+              </a>
+              .
             </p>
             <h3>UX Designer - S-group / Sokos </h3>
             <p>
-              Developing a new <a href="https://sokos.fi">Sokos.fi</a> webstore
-              and driving user-centric design within the community. Alongside
-              Sokos development, participating in internal design system
-              development and internal design processes.
+              Developing a new{" "}
+              <a
+                href="https://sokos.fi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sokos.fi
+              </a>{" "}
+              webstore and driving user-centric design within the community.
+              Alongside Sokos development, participating in internal design
+              system development and developing company-wide design processes.
             </p>
             <h3>UX/UI Designer - Solidabis Oy </h3>
             <p>
@@ -57,7 +104,11 @@ function CV({ closeCV, isMobile }) {
               scratch as a one person team with minimal budget. Part-time
               managing Solidabis marketing strategy, during which I single
               handedly redesigned and redeveloped{" "}
-              <a href="https://solidabis.com">
+              <a
+                href="https://solidabis.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Solidabis' Wordpress-based website
               </a>{" "}
               using the Genesis framework and coding a custom theme on PHP, CSS
@@ -69,13 +120,23 @@ function CV({ closeCV, isMobile }) {
               design. Client cooperation and usability assessments of
               implemented products daily. One of the greatest accomplishments
               was to get my team to use the{" "}
-              <a href="https://carbondesignsystem.com">Carbon design system</a>,
-              therefore increasing consistency and scaling with demos.
+              <a
+                href="https://carbondesignsystem.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Carbon design system
+              </a>
+              , therefore increasing consistency and scaling with demos.
             </p>
             <h2>Education</h2>
             <h3>Master of Arts in New Media - Aalto University</h3>
             <p>
-              <a href="https://aaltodoc.aalto.fi/handle/123456789/40753">
+              <a
+                href="https://aaltodoc.aalto.fi/handle/123456789/40753"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 My Master’s Thesis
               </a>{" "}
               in New Media Design & Production handled the issues faced by a

@@ -104,7 +104,7 @@ function Desktop() {
   const [tunesOpened, toggleTunes] = useState(false);
 
   return (
-    <ThemeProvider theme="rose">
+    <ThemeProvider theme="millenium">
       <GlobalStyle></GlobalStyle>
       {showAboutModal && (
         <S.layoutMain
@@ -126,31 +126,55 @@ function Desktop() {
           <S.layoutMainContent bg="white" boxShadow="out">
             <S.textModal>
               <div class="text-content">
-                <h1>Moikka! 👋</h1>
+                <h1>Moikka!</h1>
                 <p>
-                  I am Janne, a designer with a UX/UI focus working at{" "}
-                  <a href="https://hs.fi/">Helsingin Sanomat</a>, the largest
-                  subscription newspaper in the Nordics. I am working as a
-                  designer-developer at the moment, focusing on creating
-                  award-winning storytelling solutions with HS Data Desk. Check
-                  out{" "}
-                  <a href="https://www.hs.fi/aihe/datajournalismi/">
-                    some of our latest stories.
-                  </a>
+                  I'm Janne, a designer from Helsinki. I've been working lately
+                  with product development in many roles and domains: from
+                  ecommerce, to public sector, to startups. I'm into structured
+                  and systems oriented software development, where design is
+                  agile and rapid.
                 </p>
                 <p>
                   This app, sort of a playground of ideas, has been built with
                   Create React App and{" "}
-                  <a href="https://github.com/React95/React95">React95</a>, an
-                  open-source Windows95 component library for React.
+                  <a
+                    href="https://github.com/React95/React95"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    React95
+                  </a>
+                  , an open-source Windows95 component library for React.
                 </p>
                 <p>
-                  Oh and by the way, I made a{" "}
-                  <a href="https://www.figma.com/file/2cbigNitjcruBDZT12ixIq/React95-Design-Kit">
+                  If you're interested in this project even further check out
+                  the{" "}
+                  <a
+                    href="https://www.figma.com/file/2cbigNitjcruBDZT12ixIq/React95-Design-Kit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Design Kit for React95
-                  </a>
-                  , check it out!
+                  </a>{" "}
+                  that I made as a past-time project.
                 </p>
+                <span>
+                  <a
+                    href="https://windowswallpaper.miraheze.org/wiki/File:Clouds_(Windows_95).png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Background
+                  </a>{" "}
+                  by WindowsAesthetics /{" "}
+                  <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    CC BY-SA 4.0
+                  </a>
+                </span>
               </div>
             </S.textModal>
           </S.layoutMainContent>
@@ -210,13 +234,16 @@ function Desktop() {
                   <br />
                   <h2>Other Skills</h2>
                   <ul>
+                    <li>Agile methods</li>
+                    <li>Product development</li>
+                    <li>Project management</li>
                     <li>Design systems</li>
                     <li>User interviews</li>
                     <li>User testing</li>
                     <li>Wireframing and prototyping</li>
                     <li>Visual design</li>
                     <li>Research</li>
-                    <li>Copywriting and social Media</li>
+                    <li>Copywriting and social media</li>
                     <li>Content creation</li>
                     <li>Workshops</li>
                     <li>Facilitation</li>

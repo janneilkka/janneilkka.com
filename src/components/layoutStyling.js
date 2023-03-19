@@ -25,15 +25,13 @@ export const layoutMainContent = styled(Frame)`
   overflow-y: auto;
   max-height: 70vh;
   margin: auto;
-  background: #513d40;
   ${media.lessThan("large")`
   max-height: 70vh;
   `}
 `;
 
 export const textModal = styled(Frame)`
-  background: #513d40;
-  color: #e0e0e0;
+  background: #fff;
   boxshadow: in;
   height: 100%;
   padding: 20px;

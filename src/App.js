@@ -6,13 +6,15 @@ import DesktopIcons from "./components/desktopIcons";
 
 const Home = () => {
   return (
-    <ThemeProvider>
-      <GlobalStyle></GlobalStyle>
-      <Page>
-        <Desktop></Desktop>
-        {DesktopIcons}
-      </Page>
-    </ThemeProvider>
+    <body class="background">
+      <ThemeProvider>
+        <GlobalStyle />
+        <Page>
+          <Desktop></Desktop>
+          {DesktopIcons}
+        </Page>
+      </ThemeProvider>
+    </body>
   );
 };
 export default Home;
