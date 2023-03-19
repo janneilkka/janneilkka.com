@@ -28,8 +28,8 @@ function Portfolio({ closePortfolio, isMobile }) {
             <h1>Short Portfolio</h1>
             <p>
               This is a shortened, non-visual version of my portfolio without
-              detailed information the projects I have been working on. If you
-              are interested in seeing any of the work I have done in more
+              detailed information on the projects I have been working on. If
+              you are interested in seeing any of the work I have done in more
               detail, please contact me for a visual portfolio.
             </p>
             <hr />
