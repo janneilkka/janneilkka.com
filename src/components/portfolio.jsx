@@ -29,7 +29,32 @@ function Portfolio({ closePortfolio, isMobile }) {
             This is a shortened, non-visual version of my portfolio without
             detailed information on the projects I have been working on. If you
             are interested in seeing any of the work I have done in more detail,
-            please contact me for a visual portfolio.
+            please contact me for a call and I'll present the learnings in more
+            detail.
+          </p>
+          <hr />
+          <h2>B2C booking platform</h2>
+          <h3>Anyhau Oy</h3>
+          <span>
+            Role: Design lead, product owner, "scrum master", product manager
+          </span>
+          <p>
+            <h4>Background</h4>
+            Anyhau was a startup building a new marketplace that unites pet
+            owners and pet businesses. At the moment there is no
+            well-functioning booking platform that caters specifically to pet
+            businesses’ unique needs in comparison to, for example, beauty
+            salons. All the while all pet businesses handle bookings in their
+            own methods ranging from Google Calendar to whiteboards.
+            <h4>Solution</h4>I ran daily routines (dailies, weeklies, demos,
+            refinements, feedbacks etc.), seeing over the development work of
+            the product, and kept all stakeholders up to date on the progress.
+            Meanwhile, I designed the platform's MVP, multiple visual assets as
+            well as coded some of the frontend (such as a Material theme for the
+            component library). During the process I kept in close contact with
+            both business and consumer users to listen to their needs. During
+            the time, we also tried Shape Up-method as an agile method with
+            great learnings.
           </p>
           <hr />
           <h2>The Election Machines</h2>

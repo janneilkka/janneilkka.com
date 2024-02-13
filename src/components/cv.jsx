@@ -35,7 +35,7 @@ function CV({ closeCV, isMobile }) {
             and product ownership.
           </p>
           <h2>Latest Work History</h2>
-          <h3>Head of Design - Anyhau </h3>
+          <h3>Head of Design, Product Owner - Anyhau </h3>
           <p>
             A leadership role in taking charge of the new platform's design for
             all of{" "}

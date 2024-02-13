@@ -8,14 +8,6 @@ const socialMedia = [
     url: "https://www.github.com/janneilkka/",
   },
   {
-    name: "Flickr",
-    url: "https://flickr.com/janneilkka",
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/janneilkka",
-  },
-  {
     name: "Instagram",
     url: "https://instagram.com/janne.ilkka",
   },

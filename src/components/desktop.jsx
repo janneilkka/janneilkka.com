@@ -127,11 +127,11 @@ function Desktop() {
             <S.textModal>
               <h1>Moikka!</h1>
               <p>
-                I'm Janne, a designer from Helsinki. I've been working lately
-                with product development in many roles and domains: from
-                ecommerce, to public sector, to startups. I'm into structured
-                and systems oriented software development, where design is agile
-                and rapid.
+                I'm Janne, a designer of many talents from Helsinki. I've been
+                working lately with product development in many roles and
+                domains: from ecommerce, to public sector, to startups. I'm into
+                structured and systems oriented software development, where
+                design is agile and rapid.
               </p>
               <p>
                 This app, sort of a playground of ideas, has been built with
@@ -200,16 +200,21 @@ function Desktop() {
                 with numbers, percentages etc. - are skills really something
                 people can measure? However, here is a rough estimate of my
                 latest skills.
+                <br />
+                <hr />
                 <h2>Design tools</h2>
-                <h3>Figma</h3>
+                <h3>Figma, Sketch</h3>
                 <ProgressBar width={250} percent={90} />
                 <h3>Adobe CC</h3>
                 <ProgressBar width={250} percent={85} />
-                <h3>Sketch, InVision</h3>
-                <ProgressBar width={250} percent={85} />
+                <h3>Prototyping, wireframing, user flows</h3>
+                <ProgressBar width={250} percent={80} />
+                <h3>User testing, interviewing</h3>
+                <ProgressBar width={250} percent={80} />
                 <h3>WCAG 2.1</h3>
                 <ProgressBar width={250} percent={75} />
                 <br />
+                <hr />
                 <h2>Dev tools</h2>
                 <h3>Storybook(JS)</h3>
                 <ProgressBar width={250} percent={75} />
@@ -226,6 +231,7 @@ function Desktop() {
                 <h3>Vue</h3>
                 <ProgressBar width={250} percent={15} />
                 <br />
+                <hr />
                 <h2>Other Skills</h2>
                 <ul>
                   <li>Agile methods</li>
