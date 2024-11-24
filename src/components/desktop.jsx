@@ -13,12 +13,13 @@ import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
 import "./styles.scss";
 import {
-  Progman37,
   Mspaint,
   User,
   CdMusic,
   Progman34,
-  Mail,
+  Textchat,
+  Explorer103,
+  Awfxcg321303,
 } from "@react95/icons";
 import Portfolio from "./portfolio";
 import CV from "./cv";
@@ -33,7 +34,7 @@ function Desktop() {
 
   const [items] = useState([]);
 
-  /* About Modal */
+  /* Welcome Modal */
   const [showAboutModal, setShowAboutModal] = useState(true);
   const handleOpenAboutModal = useCallback(() => {
     setShowAboutModal(true);
@@ -109,31 +110,20 @@ function Desktop() {
       {showAboutModal && (
         <S.layoutMain
           isMobile={isMobile}
-          icon={<Progman37 variant="32x32_4" />}
-          title={"About.txt"}
+          icon={<Textchat variant="32x32_4" />}
+          title={"Welcome.txt"}
           closeModal={handleCloseAboutModal}
-          menu={[
-            {
-              name: "Options",
-              list: (
-                <List>
-                  <List.Item onClick={handleCloseAboutModal}>Close</List.Item>
-                </List>
-              ),
-            },
-          ]}
         >
           <S.layoutMainContent bg="white" boxShadow="out">
             <S.textModal>
-              <h1>Moikka!</h1>
+              <h1>Hello!</h1>
               <p>
                 I'm Janne, a designer of many talents from Helsinki. I've been
                 working lately with product development in many roles and
                 domains: from ecommerce, to public sector, to startups. I'm into
                 structured and systems oriented software development, where
                 design is agile and rapid.
-              </p>
-              <p>
+                <br />
                 This app, sort of a playground of ideas, has been built with
                 Create React App and{" "}
                 <a
@@ -154,7 +144,7 @@ function Desktop() {
                 </a>{" "}
                 that I made as a past-time project.
               </p>
-              <span>
+              <p>
                 <a
                   href="https://windowswallpaper.miraheze.org/wiki/File:Clouds_(Windows_95).png"
                   target="_blank"
@@ -170,7 +160,7 @@ function Desktop() {
                 >
                   CC BY-SA 4.0
                 </a>
-              </span>
+              </p>
             </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
@@ -181,75 +171,62 @@ function Desktop() {
           title={"Skills.txt"}
           closeModal={handleCloseSkillsModal}
           icon={<Mspaint variant="32x32_4" />}
-          menu={[
-            {
-              name: "Options",
-              list: (
-                <List>
-                  <List.Item onClick={handleCloseSkillsModal}>Close</List.Item>
-                </List>
-              ),
-            },
-          ]}
         >
           <S.layoutMainContent bg="white" boxShadow="in">
             <S.textModal>
+              <h1>Some of my skills</h1>
               <p>
-                {" "}
-                <h1>Some of my skills</h1>I disagree with quantifying skills
-                with numbers, percentages etc. - are skills really something
-                people can measure? However, here is a rough estimate of my
-                latest skills.
-                <br />
-                <hr />
-                <h2>Design tools</h2>
-                <h3>Figma, Sketch</h3>
-                <ProgressBar width={250} percent={90} />
-                <h3>Adobe CC</h3>
-                <ProgressBar width={250} percent={85} />
-                <h3>Prototyping, wireframing, user flows</h3>
-                <ProgressBar width={250} percent={80} />
-                <h3>User testing, interviewing</h3>
-                <ProgressBar width={250} percent={80} />
-                <h3>WCAG 2.1</h3>
-                <ProgressBar width={250} percent={75} />
-                <br />
-                <hr />
-                <h2>Dev tools</h2>
-                <h3>Storybook(JS)</h3>
-                <ProgressBar width={250} percent={75} />
-                <h3>HTML, CSS, SASS</h3>
-                <ProgressBar width={250} percent={75} />
-                <h3>Wordpress (PHP/Themes)</h3>
-                <ProgressBar width={250} percent={70} />
-                <h3>Git</h3>
-                <ProgressBar width={250} percent={60} />
-                <h3>Raspberry Pi & Arduino</h3>
-                <ProgressBar width={250} percent={30} />
-                <h3>React</h3>
-                <ProgressBar width={250} percent={30} />
-                <h3>Vue</h3>
-                <ProgressBar width={250} percent={15} />
-                <br />
-                <hr />
-                <h2>Other Skills</h2>
-                <ul>
-                  <li>Agile methods</li>
-                  <li>Product development</li>
-                  <li>Project management</li>
-                  <li>Design systems</li>
-                  <li>User interviews</li>
-                  <li>User testing</li>
-                  <li>Wireframing and prototyping</li>
-                  <li>Visual design</li>
-                  <li>Research</li>
-                  <li>Copywriting and social media</li>
-                  <li>Content creation</li>
-                  <li>Workshops</li>
-                  <li>Facilitation</li>
-                  <li>Concept creation</li>
-                </ul>
+                I disagree with quantifying skills with numbers, percentages
+                etc. - are skills really something people can measure? However,
+                here is a rough estimate of my latest skills.
               </p>
+              <br />
+              <hr />
+              <h2>Design tools</h2>
+              <h3>Figma, Sketch</h3>
+              <ProgressBar width={250} percent={90} />
+              <h3>Adobe CC</h3>
+              <ProgressBar width={250} percent={85} />
+              <h3>Prototyping, wireframing, user flows</h3>
+              <ProgressBar width={250} percent={80} />
+              <h3>User testing, interviewing</h3>
+              <ProgressBar width={250} percent={80} />
+              <h3>WCAG 2.1</h3>
+              <ProgressBar width={250} percent={75} />
+              <br />
+              <hr />
+              <h2>Dev tools</h2>
+              <h3>Storybook(JS)</h3>
+              <ProgressBar width={250} percent={75} />
+              <h3>HTML, CSS, SASS</h3>
+              <ProgressBar width={250} percent={75} />
+              <h3>Wordpress (PHP/Themes)</h3>
+              <ProgressBar width={250} percent={70} />
+              <h3>Git</h3>
+              <ProgressBar width={250} percent={60} />
+              <h3>Raspberry Pi & Arduino</h3>
+              <ProgressBar width={250} percent={30} />
+              <h3>React</h3>
+              <ProgressBar width={250} percent={30} />
+              <h3>Vue</h3>
+              <ProgressBar width={250} percent={15} />
+              <br />
+              <hr />
+              <h2>Other Skills</h2>
+              <li>Agile methods</li>
+              <li>Product development</li>
+              <li>Project management</li>
+              <li>Design systems</li>
+              <li>User interviews</li>
+              <li>User testing</li>
+              <li>Wireframing and prototyping</li>
+              <li>Visual design</li>
+              <li>Research</li>
+              <li>Copywriting and social media</li>
+              <li>Content creation</li>
+              <li>Workshops</li>
+              <li>Facilitation</li>
+              <li>Concept creation</li>
             </S.textModal>
           </S.layoutMainContent>
         </S.layoutMain>
@@ -260,16 +237,6 @@ function Desktop() {
           title={"janne_compressed_for_web.jpeg"}
           closeModal={handleClosePhotoModal}
           icon={<User variant="32x32_4" />}
-          menu={[
-            {
-              name: "Options",
-              list: (
-                <List>
-                  <List.Item onClick={handleClosePhotoModal}>Close</List.Item>
-                </List>
-              ),
-            },
-          ]}
         >
           <Frame
             boxShadow="none"
@@ -281,10 +248,10 @@ function Desktop() {
               src={Janne_pixelated}
               aria-hidden
               alt="Janne as a pixelated image"
-              class="full-width-image"
+              className="full-width-image"
             ></img>
           </Frame>
-          <div class="image-text">
+          <div className="image-text">
             <p>janne_compressed_for_web.jpeg</p>
           </div>
         </S.layoutMain>
@@ -296,18 +263,6 @@ function Desktop() {
           height="100%"
           icon={<CdMusic variant="32x32_4" />}
           width={340}
-          menu={[
-            {
-              name: "Options",
-              list: (
-                <List>
-                  <List.Item onClick={handleCloseVaporwaveModal1}>
-                    Close
-                  </List.Item>
-                </List>
-              ),
-            },
-          ]}
           title="My_Alter_Ego.doc"
         >
           <S.textModal>
@@ -330,11 +285,10 @@ function Desktop() {
             <div>
               <iframe
                 src="https://www.youtube.com/embed/7SyxEF-QG_M"
-                frameborder="0"
                 width="100%"
                 title="A Song from a Vaporwave Album"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </S.textModal>
@@ -344,15 +298,9 @@ function Desktop() {
         list={
           <List>
             <List.Item
-              as="a"
-              href="mailto:janne.ilkka@gmail.com"
-              icon={<Mail variant="32x32_4" />}
-              target="_blank"
+              icon={<Progman34 variant="32x32_4" />}
+              className="listLink"
             >
-              Email me
-            </List.Item>
-            <List.Divider />
-            <List.Item icon={<Progman34 variant="32x32_4" />}>
               Socials
               <List>
                 {socialMedia.map(({ icon, name, url }) => (
@@ -363,41 +311,70 @@ function Desktop() {
                     key={name}
                     rel="noopener noreferrer"
                     target="_blank"
+                    className="listLink"
                   >
                     {name}
                   </List.Item>
                 ))}
               </List>
             </List.Item>
-            <List.Item icon={<CdMusic variant="32x32_4" />}>
+            <List.Item
+              icon={<CdMusic variant="32x32_4" />}
+              className="listLink"
+            >
               Tunes
               <List>
                 <List.Item
                   onClick={handleOpenVaporwaveModal1}
                   icon={<CdMusic variant="32x32_4" />}
+                  className="listLink"
                 >
                   Janne's Vaporwave Story from 2018
+                </List.Item>
+                <List.Item
+                  onClick={openTunes}
+                  icon={<CdMusic variant="32x32_4" />}
+                  className="listLink"
+                >
+                  Janne's Ultimate House Playlist on Spotify
                 </List.Item>
               </List>
             </List.Item>
             <List.Item
+              icon={<Awfxcg321303 variant="32x32_4" />}
+              onClick={openCV}
+              className="listLink"
+            >
+              CV{" "}
+            </List.Item>
+            <List.Item
+              icon={<Explorer103 variant="32x32_4" />}
+              onClick={openPortfolio}
+              className="listLink"
+            >
+              Portfolio{" "}
+            </List.Item>
+            <List.Item
               icon={<User variant="32x32_4" />}
               onClick={handleOpenPhotoModal}
+              className="listLink"
             >
               Janne
             </List.Item>
             <List.Item
               icon={<Mspaint variant="32x32_4" />}
               onClick={handleOpenSkillsModal}
+              className="listLink"
             >
               Skills
             </List.Item>
             <List.Divider />
             <List.Item
-              icon={<Progman37 variant="32x32_4" />}
+              icon={<Textchat variant="32x32_4" />}
               onClick={handleOpenAboutModal}
+              className="listLink"
             >
-              About
+              Welcome
             </List.Item>
           </List>
         }

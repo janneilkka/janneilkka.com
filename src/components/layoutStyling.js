@@ -1,8 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import media from "styled-media-query";
 import { Modal, Frame } from "@react95/core";
-
-export const layoutWrapper = styled.section``;
 
 export const layoutMain = styled(Modal)`
   display: flex;
@@ -13,20 +11,15 @@ export const layoutMain = styled(Modal)`
     margin: 1rem 1rem 0 0.5rem;
     top: 0;
     width: fill-available;
-  `}
-  ${(props) =>
-    props.isMobile &&
-    css`
-      top: 0;
-    `}
+  `};
 `;
 
 export const layoutMainContent = styled(Frame)`
   overflow-y: auto;
   max-height: 70vh;
   margin: auto;
-  ${media.lessThan("large")`
-  max-height: 70vh;
+  ${media.lessThan("medium")`
+  max-height: 80vh;
   `}
 `;
 

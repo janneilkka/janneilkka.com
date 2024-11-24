@@ -1,5 +1,4 @@
 import React from "react";
-import { List } from "@react95/core";
 import { Awfxcg321303 } from "@react95/icons";
 import * as S from "./layoutStyling";
 
@@ -11,16 +10,6 @@ function CV({ closeCV, isMobile }) {
       closeModal={closeCV}
       height="100%"
       icon={<Awfxcg321303 variant="32x32_4" />}
-      menu={[
-        {
-          name: "Options",
-          list: (
-            <List>
-              <List.Item onClick={closeCV}>Close</List.Item>
-            </List>
-          ),
-        },
-      ]}
     >
       <S.layoutMainContent bg="white" boxShadow="in">
         <S.textModal>
@@ -34,7 +23,7 @@ function CV({ closeCV, isMobile }) {
             talents in practice, such as in project management, product design
             and product ownership.
           </p>
-          <h2>Latest Work History</h2>
+          <h2>Work History</h2>
           <h3>Head of Design, Product Owner - Anyhau </h3>
           <p>
             A leadership role in taking charge of the new platform's design for
@@ -66,20 +55,12 @@ function CV({ closeCV, isMobile }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              election machines
+              voting aid machines
             </a>{" "}
             for all Sanoma brands (Aamulehti, HS, Ilta-Sanomat, regional
-            brands). The election machine consists of three user interfaces: the
-            candidate machine, election machine to the voters and results
-            service for election night. Read more about the election machine{" "}
-            <a
-              href="https://www.vaalikone.fi/eduskunta2023/hs/faq"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-            .
+            brands). The voting aid machines consists of three user interfaces:
+            the candidate machine, voting aid machines to the voters and results
+            service for election night.
           </p>
           <h3>UX Designer - S-group / Sokos </h3>
           <p>

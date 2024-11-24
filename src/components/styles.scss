@@ -1,4 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&display=swap");
+@font-face {
+  font-family: "Jersey 15";
+  src: url(../assets/Jersey15-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(../assets/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url(../assets/OpenSans-SemiBold.ttf) format("truetype");
+}
 
 .full-width-image {
   height: 250px;
@@ -24,7 +35,66 @@
   margin: auto;
 }
 
-.background {
-  background-image: url("/bgnd.png");
-  background-size: cover;
+h1 {
+  font-family: "Jersey 15";
+  font-weight: 500;
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Jersey 15";
+  font-weight: 400;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Open Sans Semibold";
+  font-weight: 200;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: "Open Sans Semibold";
+  font-weight: 600;
+  font-size: 16px;
+}
+
+p,
+a,
+li {
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+a {
+  color: #183672;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+a:hover {
+  color: #199995;
+  text-decoration: none;
+  box-shadow: inset 100vh 0 0 0 #d3e2e7;
+}
+
+br {
+  content: "";
+  margin: 1em;
+  display: block;
+}
+
+.listLink {
+  font-family: "MS Sans Serif";
+  font-size: 12px;
+}
+.listLink:hover {
+  box-shadow: none;
+}
+
+.role {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: italic;
 }
