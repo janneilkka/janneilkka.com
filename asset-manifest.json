@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.bacb9886.chunk.css",
-    "main.js": "/static/js/main.1c1be52a.chunk.js",
-    "main.js.map": "/static/js/main.1c1be52a.chunk.js.map",
+    "main.css": "/static/css/main.cdf18a1e.chunk.css",
+    "main.js": "/static/js/main.23519a35.chunk.js",
+    "main.js.map": "/static/js/main.23519a35.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b7d341ba.js",
     "runtime-main.js.map": "/static/js/runtime-main.b7d341ba.js.map",
-    "static/js/2.3c0de558.chunk.js": "/static/js/2.3c0de558.chunk.js",
-    "static/js/2.3c0de558.chunk.js.map": "/static/js/2.3c0de558.chunk.js.map",
+    "static/js/2.210cab98.chunk.js": "/static/js/2.210cab98.chunk.js",
+    "static/js/2.210cab98.chunk.js.map": "/static/js/2.210cab98.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.bacb9886.chunk.css.map": "/static/css/main.bacb9886.chunk.css.map",
-    "static/js/2.3c0de558.chunk.js.LICENSE.txt": "/static/js/2.3c0de558.chunk.js.LICENSE.txt",
+    "static/css/main.cdf18a1e.chunk.css.map": "/static/css/main.cdf18a1e.chunk.css.map",
+    "static/js/2.210cab98.chunk.js.LICENSE.txt": "/static/js/2.210cab98.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/static/media/OpenSans-SemiBold.c7ab78a5.ttf",
     "static/media/MS-Sans-Serif.30dfad5d.eot": "/static/media/MS-Sans-Serif.30dfad5d.eot",
     "static/media/MS-Sans-Serif.4fb9ed0f.woff2": "/static/media/MS-Sans-Serif.4fb9ed0f.woff2",
     "static/media/MS-Sans-Serif.82eeac7b.woff": "/static/media/MS-Sans-Serif.82eeac7b.woff",
@@ -18,7 +19,7 @@
     "static/media/React95Video-Numbers.70eb4c83.eot": "/static/media/React95Video-Numbers.70eb4c83.eot",
     "static/media/React95Video-Numbers.abf01d42.ttf": "/static/media/React95Video-Numbers.abf01d42.ttf",
     "static/media/React95Video-Numbers.cc52603d.woff": "/static/media/React95Video-Numbers.cc52603d.woff",
-    "static/media/styles.scss": "/static/media/bgnd.f16653ad.png",
+    "static/media/index.css": "/static/media/bgnd.f16653ad.png",
     "static/media/check-disabled.svg": "/static/media/check-disabled.6c74515b.svg",
     "static/media/check.svg": "/static/media/check.cab94f08.svg",
     "static/media/janne_pixelated.cd217e0b.png": "/static/media/janne_pixelated.cd217e0b.png",
@@ -26,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b7d341ba.js",
-    "static/js/2.3c0de558.chunk.js",
-    "static/css/main.bacb9886.chunk.css",
-    "static/js/main.1c1be52a.chunk.js"
+    "static/js/2.210cab98.chunk.js",
+    "static/css/main.cdf18a1e.chunk.css",
+    "static/js/main.23519a35.chunk.js"
   ]
 }
