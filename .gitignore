@@ -6,6 +6,10 @@
 .pnp.js
 .yarn.lock
 yarn.lock
+/.vscode
+.env
+.prettierignore
+.prettierrc.json
 
 # testing
 /coverage
