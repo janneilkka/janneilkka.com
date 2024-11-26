@@ -9,7 +9,7 @@ const PageProps = {
   title: PropTypes.string,
 };
 
-const Page = ({ children, description = null, title = "Janne Koivisto" }) => (
+const Page = ({ children }) => (
   <>
     <Box as="main">{children}</Box>
   </>

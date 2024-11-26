@@ -1,5 +1,5 @@
 import React from "react";
-import { Awfxcg321303 } from "@react95/icons";
+import { Shell32133 } from "@react95/icons";
 import * as S from "./layoutStyling";
 
 function CV({ closeCV, isMobile }) {
@@ -9,7 +9,7 @@ function CV({ closeCV, isMobile }) {
       title={"CV.txt"}
       closeModal={closeCV}
       height="100%"
-      icon={<Awfxcg321303 variant="32x32_4" />}
+      icon={<Shell32133 variant="16x16_4" />}
     >
       <S.layoutMainContent bg="white" boxShadow="in">
         <S.textModal>

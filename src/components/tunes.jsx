@@ -10,7 +10,7 @@ function Tunes({ closeTunes, isMobile }) {
       title={"Tunes"}
       closeModal={closeTunes}
       height="100%"
-      icon={<CdMusic variant="32x32_4" />}
+      icon={<CdMusic variant="16x16_4" />}
     >
       <Frame
         boxShadow="none"

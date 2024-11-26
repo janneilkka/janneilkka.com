@@ -9,7 +9,7 @@ function Portfolio({ closePortfolio, isMobile }) {
       title={"Portfolio.txt"}
       closeModal={closePortfolio}
       height="100%"
-      icon={<Explorer103 variant="32x32_4" />}
+      icon={<Explorer103 variant="16x16_4" />}
     >
       <S.layoutMainContent bg="white" boxShadow="in">
         <S.textModal>

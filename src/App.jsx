@@ -3,7 +3,7 @@ import { GlobalStyle, ThemeProvider } from "@react95/core";
 import Page from "./components/mainPage";
 import Desktop from "./components/desktop";
 
-const Home = () => {
+const App = () => {
   return (
     <ThemeProvider>
       <GlobalStyle />
@@ -13,4 +13,4 @@ const Home = () => {
     </ThemeProvider>
   );
 };
-export default Home;
+export default App;

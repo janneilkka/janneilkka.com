@@ -1,13 +1,12 @@
 import React, { useState, useCallback } from "react";
 import {
-  GlobalStyle,
   ThemeProvider,
   List,
   Frame,
   ProgressBar,
   TaskBar,
 } from "@react95/core";
-import Janne_pixelated from "../janne_pixelated.png";
+import Janne_pixelated from "../assets/janne_pixelated.png";
 import socialMedia from "./socialMedia";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
@@ -105,12 +104,11 @@ function Desktop() {
   const [tunesOpened, toggleTunes] = useState(false);
 
   return (
-    <ThemeProvider theme="millenium">
-      <GlobalStyle></GlobalStyle>
+    <ThemeProvider>
       {showAboutModal && (
         <S.layoutMain
           isMobile={isMobile}
-          icon={<Textchat variant="32x32_4" />}
+          icon={<Textchat variant="16x16_4" />}
           title={"Welcome.txt"}
           closeModal={handleCloseAboutModal}
         >
@@ -170,7 +168,7 @@ function Desktop() {
           isMobile={isMobile}
           title={"Skills.txt"}
           closeModal={handleCloseSkillsModal}
-          icon={<Mspaint variant="32x32_4" />}
+          icon={<Mspaint variant="16x16_4" />}
         >
           <S.layoutMainContent bg="white" boxShadow="in">
             <S.textModal>
@@ -236,7 +234,7 @@ function Desktop() {
           isMobile={isMobile}
           title={"janne_compressed_for_web.jpeg"}
           closeModal={handleClosePhotoModal}
-          icon={<User variant="32x32_4" />}
+          icon={<User variant="16x16_4" />}
         >
           <Frame
             boxShadow="none"
@@ -261,7 +259,7 @@ function Desktop() {
           isMobile={isMobile}
           closeModal={handleCloseVaporwaveModal1}
           height="100%"
-          icon={<CdMusic variant="32x32_4" />}
+          icon={<CdMusic variant="16x16_4" />}
           width={340}
           title="My_Alter_Ego.doc"
         >
@@ -326,14 +324,14 @@ function Desktop() {
               <List>
                 <List.Item
                   onClick={handleOpenVaporwaveModal1}
-                  icon={<CdMusic variant="32x32_4" />}
+                  icon={<CdMusic variant="16x16_4" />}
                   className="listLink"
                 >
                   Janne's Vaporwave Story from 2018
                 </List.Item>
                 <List.Item
                   onClick={openTunes}
-                  icon={<CdMusic variant="32x32_4" />}
+                  icon={<CdMusic variant="16x16_4" />}
                   className="listLink"
                 >
                   Janne's Ultimate House Playlist on Spotify
@@ -379,24 +377,22 @@ function Desktop() {
           </List>
         }
       />
-      <React.Fragment>
-        <Shortcuts
-          openPortfolio={openPortfolio}
-          openCV={openCV}
-          openTunes={openTunes}
+      <Shortcuts
+        openPortfolio={openPortfolio}
+        openCV={openCV}
+        openTunes={openTunes}
+      />
+      {explorerOpened && (
+        <Portfolio
+          items={items}
+          closePortfolio={closePortfolio}
+          isMobile={isMobile}
         />
-        {explorerOpened && (
-          <Portfolio
-            items={items}
-            closePortfolio={closePortfolio}
-            isMobile={isMobile}
-          />
-        )}
-        {cvOpened && <CV items={items} closeCV={closeCV} isMobile={isMobile} />}
-        {tunesOpened && (
-          <Tunes items={items} closeTunes={closeTunes} isMobile={isMobile} />
-        )}
-      </React.Fragment>
+      )}
+      {cvOpened && <CV items={items} closeCV={closeCV} isMobile={isMobile} />}
+      {tunesOpened && (
+        <Tunes items={items} closeTunes={closeTunes} isMobile={isMobile} />
+      )}
     </ThemeProvider>
   );
 }

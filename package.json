@@ -5,8 +5,10 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.11.6",
+    "@react95/clippy": "^2.0.2",
     "@react95/core": "^5.7.3",
     "@react95/icons": "^2.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
     "babel-loader": "^8.1.0",
     "eslint": "^7.10.0",
     "prop-types": "^15.7.2",
@@ -14,18 +16,18 @@
     "react-dom": "^16.11.0",
     "react-iframe": "^1.8.0",
     "react-player": "^2.6.2",
-    "react-scripts": "^4.0.3",
     "sass": "^1.81.0",
     "styled-components": "^4.4.1",
     "styled-media-query": "^2.1.2",
+    "vite": "^6.0.0",
     "yarn": "^1.22.10"
   },
   "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts test"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
