@@ -1,5 +1,12 @@
 import React from "react";
-import { List, Frame, ProgressBar, TaskBar, TitleBar } from "@react95/core";
+import {
+  List,
+  Frame,
+  ProgressBar,
+  TaskBar,
+  TitleBar,
+  Modal,
+} from "@react95/core";
 import Janne_pixelated from "../assets/janne_pixelated.png";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
@@ -210,11 +217,10 @@ function Desktop() {
         </S.styledModal>
       )}
       {showSkillsModal && (
-        <S.styledModal
+        <Modal className="styledModal" closeModal={handleCloseSkillsModal}>
           title={"Skills.txt"}
           titleBarOptions={<TitleBar.Close onClick={handleCloseSkillsModal} />}
-          icon={<Mspaint variant="16x16_4" />}
-        >
+          icon={<Mspaint variant="16x16_4" />}>
           <S.styledModalFrame bg="white" boxShadow="$in">
             <h1>Some of my skills</h1>
             <p>
@@ -270,7 +276,7 @@ function Desktop() {
             <li>Facilitation</li>
             <li>Concept creation</li>
           </S.styledModalFrame>
-        </S.styledModal>
+        </Modal>
       )}
       {showPhotoModal && (
         <S.styledModal

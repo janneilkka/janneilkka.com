@@ -82,3 +82,31 @@ br {
   font-size: 14px;
   font-style: italic;
 }
+
+$breakpoints: (
+  mobile: 325px,
+  tablet: 768px,
+  laptop: 1024px,
+);
+
+@mixin device($device) {
+  @if map-has-key($breakpoints, $device) {
+    @media (min-width: #{map-get($breakpoints, $device)}) {
+      @content;
+    }
+  }
+}
+
+.styled-modal {
+  @include device(mobile) {
+    margin: 5px;
+    top: 0;
+  }
+
+  @include device(laptop) {
+    flex: none;
+    max-width: 700px;
+    left: 80px;
+    top: 80px;
+  }
+}
