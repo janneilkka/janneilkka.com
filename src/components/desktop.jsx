@@ -17,81 +17,28 @@ import {
 import Portfolio from "./portfolio";
 import CV from "./cv";
 import Tunes from "./tunes";
+import useModal from "./useModal";
 
 function Desktop() {
-  /* Welcome Modal */
-
-  const [showAboutModal, setShowAboutModal] = useState(true);
-
-  const handleOpenAboutModal = useCallback(() => {
-    setShowAboutModal(true);
-    console.log("Modal true");
-  }, []);
-  const handleCloseAboutModal = useCallback(() => {
-    setShowAboutModal(false);
-    console.log("Modal false");
-  }, []);
-
-  /* Skills Modal */
-  const [showSkillsModal, setShowSkillsModal] = useState(false);
-  const handleOpenSkillsModal = useCallback(() => {
-    setShowSkillsModal(true);
-  }, []);
-  const handleCloseSkillsModal = useCallback(() => {
-    setShowSkillsModal(false);
-  }, []);
-
-  /* Photo Modal */
-  const [showPhotoModal, setShowPhotoModal] = useState(false);
-  const handleOpenPhotoModal = useCallback(() => {
-    setShowPhotoModal(true);
-  }, []);
-  const handleClosePhotoModal = useCallback(() => {
-    setShowPhotoModal(false);
-  }, []);
-
-  /* Vaporwave Modal 1 */
-  const [showVaporwaveModal1, setShowVaporwaveModal1] = useState(false);
-  const handleOpenVaporwaveModal1 = useCallback(() => {
-    setShowVaporwaveModal1(true);
-  }, []);
-  const handleCloseVaporwaveModal1 = useCallback(() => {
-    setShowVaporwaveModal1(false);
-  }, []);
-
-  /* Portfolio Shortcut */
-  const closePortfolio = () => {
-    togglePortfolio(false);
-  };
-
-  const openPortfolio = () => {
-    togglePortfolio(true);
-  };
-  const [explorerOpened, togglePortfolio] = useState(false);
-
-  /* CV Shortcut */
-
-  const closeCV = () => {
-    toggleCV(false);
-  };
-
-  const openCV = () => {
-    toggleCV(true);
-  };
-
-  const [cvOpened, toggleCV] = useState(false);
-
-  /* Tunes Shortcut */
-
-  const closeTunes = () => {
-    toggleTunes(false);
-  };
-
-  const openTunes = () => {
-    toggleTunes(true);
-  };
-
-  const [tunesOpened, toggleTunes] = useState(false);
+  const [showAboutModal, handleOpenAboutModal, handleCloseAboutModal] =
+    useModal(true);
+  const [showSkillsModal, handleOpenSkillsModal, handleCloseSkillsModal] =
+    useModal(false);
+  const [showPhotoModal, handleOpenPhotoModal, handleClosePhotoModal] =
+    useModal(false);
+  const [
+    showVaporwaveModal1,
+    handleOpenVaporwaveModal1,
+    handleCloseVaporwaveModal1,
+  ] = useModal(false);
+  const [
+    showPortfolioModal,
+    handleOpenPortfolioModal,
+    handleClosePortfolioModal,
+  ] = useModal(false);
+  const [showCVModal, handleOpenCVModal, handleCloseCVModal] = useModal(false);
+  const [showTunesModal, handleOpenTunesModal, handleCloseTunesModal] =
+    useModal(false);
 
   return (
     <>
@@ -302,7 +249,7 @@ function Desktop() {
                   Janne's Vaporwave Story from 2018
                 </List.Item>
                 <List.Item
-                  onClick={openTunes}
+                  onClick={handleOpenTunesModal}
                   icon={<CdMusic variant="16x16_4" />}
                   className="listLink"
                 >
@@ -312,14 +259,14 @@ function Desktop() {
             </List.Item>
             <List.Item
               icon={<Awfxcg321303 variant="32x32_4" />}
-              onClick={openCV}
+              onClick={handleOpenCVModal}
               className="listLink"
             >
               CV{" "}
             </List.Item>
             <List.Item
               icon={<Explorer103 variant="32x32_4" />}
-              onClick={openPortfolio}
+              onClick={handleOpenPhotoModal}
               className="listLink"
             >
               Portfolio{" "}
@@ -350,13 +297,15 @@ function Desktop() {
         }
       />
       <Shortcuts
-        openPortfolio={openPortfolio}
-        openCV={openCV}
-        openTunes={openTunes}
+        openPortfolio={handleOpenPortfolioModal}
+        openCV={handleOpenCVModal}
+        openTunes={handleOpenTunesModal}
       />
-      {explorerOpened && <Portfolio closePortfolio={closePortfolio} />}
-      {cvOpened && <CV closeCV={closeCV} />}
-      {tunesOpened && <Tunes closeTunes={closeTunes} />}
+      {showPortfolioModal && (
+        <Portfolio closePortfolio={handleClosePortfolioModal} />
+      )}
+      {showCVModal && <CV closeCV={handleCloseCVModal} />}
+      {showTunesModal && <Tunes closeTunes={handleCloseTunesModal} />}
     </>
   );
 }
