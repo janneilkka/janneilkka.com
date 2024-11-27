@@ -1,16 +1,15 @@
 import React from "react";
-import { GlobalStyle, ThemeProvider } from "@react95/core";
 import Page from "./components/mainPage";
 import Desktop from "./components/desktop";
+import "@react95/core/GlobalStyle";
+import "@react95/core/themes/win95.css";
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <GlobalStyle />
-      <Page>
-        <Desktop />
-      </Page>
-    </ThemeProvider>
+    <Page>
+      <Desktop />
+    </Page>
   );
 };
+
 export default App;

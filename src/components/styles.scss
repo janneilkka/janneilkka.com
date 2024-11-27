@@ -11,28 +11,11 @@
   src: url(../assets/OpenSans-SemiBold.ttf) format("truetype");
 }
 
-.full-width-image {
+.fullWidthImage {
   height: 250px;
   width: 250px;
   top: 0;
   left: 0;
-}
-
-.image-text {
-  margin: auto;
-  padding-top: 5px;
-}
-
-.full-screen {
-  flex-direction: column;
-  margin: 1rem 1rem 0 0.5rem;
-  top: 0;
-  width: stretch;
-}
-
-.centered {
-  text-align: center;
-  margin: auto;
 }
 
 h1 {

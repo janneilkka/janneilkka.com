@@ -1,32 +1,30 @@
 import styled from "styled-components";
-import media from "styled-media-query";
-import { Modal, Frame } from "@react95/core";
+import { Modal } from "@react95/core";
 
-export const layoutMain = styled(Modal)`
-  display: flex;
-  margin: 0 10rem 10rem 10rem;
-  width: 80vh;
-  ${media.lessThan("medium")`
-    flex-direction: column;
-    margin: 1rem 1rem 0 0.5rem;
+const breakpoints = {
+  mobile: "325px",
+  tablet: "768px",
+  laptop: "1024px",
+};
+
+export const device = {
+  mobile: `(min-width: ${breakpoints.mobile})`,
+  laptop: `(min-width: ${breakpoints.laptop})`,
+};
+
+export const styledModal = styled(Modal)`
+  @media ${device.mobile} {
+    margin: 5px;
     top: 0;
-    width: fill-available;
-  `};
+  }
+  @media ${device.laptop} {
+    flex: none;
+    max-width: 700px;
+    left: 80px;
+    top: 80px;
+  }
 `;
 
-export const layoutMainContent = styled(Frame)`
-  overflow-y: auto;
-  max-height: 70vh;
-  margin: auto;
-  ${media.lessThan("medium")`
-  max-height: 80vh;
-  `}
-`;
-
-export const textModal = styled(Frame)`
-  background: #fff;
-  boxshadow: in;
-  height: 100%;
-  padding: 20px;
-  overflow-y: auto;
+export const styledModalFrame = styled(Modal.Content)`
+  padding: 16px;
 `;
