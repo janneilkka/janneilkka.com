@@ -1,7 +1,6 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { List, Frame, ProgressBar, TaskBar, TitleBar } from "@react95/core";
 import Janne_pixelated from "../assets/janne_pixelated.png";
-import socialMedia from "./socialMedia";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
 import "./styles.scss";
@@ -27,9 +26,9 @@ function Desktop() {
   const [showPhotoModal, handleOpenPhotoModal, handleClosePhotoModal] =
     useModal(false);
   const [
-    showVaporwaveModal1,
-    handleOpenVaporwaveModal1,
-    handleCloseVaporwaveModal1,
+    showVaporwaveModal,
+    handleOpenVaporwaveModal,
+    handleCloseVaporwaveModal,
   ] = useModal(false);
   const [
     showPortfolioModal,
@@ -40,8 +39,121 @@ function Desktop() {
   const [showTunesModal, handleOpenTunesModal, handleCloseTunesModal] =
     useModal(false);
 
+  const socialMedia = [
+    {
+      id: 1,
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/janneilkka/",
+    },
+    {
+      id: 2,
+      name: "Github",
+      url: "https://www.github.com/janneilkka/",
+    },
+    {
+      id: 3,
+      name: "Instagram",
+      url: "https://instagram.com/janne.ilkka",
+    },
+    {
+      id: 4,
+      name: "Spotify",
+      url: "https://open.spotify.com/user/rogergregor",
+    },
+  ];
+
   return (
     <>
+      <TaskBar
+        list={
+          <List>
+            <List.Item
+              icon={<Progman34 variant="32x32_4" />}
+              className="listLink"
+            >
+              Socials
+              <List>
+                {socialMedia.map(({ id, name, url }) => (
+                  <List.Item
+                    as="a"
+                    href={url}
+                    key={id}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="listLink"
+                  >
+                    {name}
+                  </List.Item>
+                ))}
+              </List>
+            </List.Item>
+            <List.Item
+              icon={<CdMusic variant="32x32_4" />}
+              className="listLink"
+            >
+              Tunes
+              <List>
+                <List.Item
+                  onClick={handleOpenVaporwaveModal}
+                  icon={<CdMusic variant="16x16_4" />}
+                  className="listLink"
+                >
+                  Janne's Vaporwave Story from 2018
+                </List.Item>
+                <List.Item
+                  onClick={handleOpenTunesModal}
+                  icon={<CdMusic variant="16x16_4" />}
+                  className="listLink"
+                >
+                  Janne's Ultimate House Playlist on Spotify
+                </List.Item>
+              </List>
+            </List.Item>
+            <List.Item
+              icon={<Awfxcg321303 variant="32x32_4" />}
+              onClick={handleOpenCVModal}
+              className="listLink"
+            >
+              CV{" "}
+            </List.Item>
+            <List.Item
+              icon={<Explorer103 variant="32x32_4" />}
+              onClick={handleOpenPortfolioModal}
+              className="listLink"
+            >
+              Portfolio{" "}
+            </List.Item>
+            <List.Item
+              icon={<User variant="32x32_4" />}
+              onClick={handleOpenPhotoModal}
+              className="listLink"
+            >
+              Janne
+            </List.Item>
+            <List.Item
+              icon={<Mspaint variant="32x32_4" />}
+              onClick={handleOpenSkillsModal}
+              className="listLink"
+            >
+              Skills
+            </List.Item>
+            <List.Divider />
+            <List.Item
+              icon={<Textchat variant="32x32_4" />}
+              onClick={handleOpenAboutModal}
+              className="listLink"
+            >
+              Welcome
+            </List.Item>
+          </List>
+        }
+      />
+
+      <Shortcuts
+        openPortfolio={handleOpenPortfolioModal}
+        openCV={handleOpenCVModal}
+        openTunes={handleOpenTunesModal}
+      />
       {showAboutModal && (
         <S.styledModal
           icon={<Textchat variant="16x16_4" />}
@@ -176,9 +288,9 @@ function Desktop() {
           </Frame>
         </S.styledModal>
       )}
-      {showVaporwaveModal1 && (
+      {showVaporwaveModal && (
         <S.styledModal
-          closeModal={handleCloseVaporwaveModal1}
+          closeModal={handleCloseVaporwaveModal}
           height="100%"
           icon={<CdMusic variant="16x16_4" />}
           width={340}
@@ -211,96 +323,6 @@ function Desktop() {
           </div>
         </S.styledModal>
       )}
-      <TaskBar
-        list={
-          <List>
-            <List.Item
-              icon={<Progman34 variant="32x32_4" />}
-              className="listLink"
-            >
-              Socials
-              <List>
-                {socialMedia.map(({ icon, name, url }) => (
-                  <List.Item
-                    as="a"
-                    href={url}
-                    icon={icon}
-                    key={name}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="listLink"
-                  >
-                    {name}
-                  </List.Item>
-                ))}
-              </List>
-            </List.Item>
-            <List.Item
-              icon={<CdMusic variant="32x32_4" />}
-              className="listLink"
-            >
-              Tunes
-              <List>
-                <List.Item
-                  onClick={handleOpenVaporwaveModal1}
-                  icon={<CdMusic variant="16x16_4" />}
-                  className="listLink"
-                >
-                  Janne's Vaporwave Story from 2018
-                </List.Item>
-                <List.Item
-                  onClick={handleOpenTunesModal}
-                  icon={<CdMusic variant="16x16_4" />}
-                  className="listLink"
-                >
-                  Janne's Ultimate House Playlist on Spotify
-                </List.Item>
-              </List>
-            </List.Item>
-            <List.Item
-              icon={<Awfxcg321303 variant="32x32_4" />}
-              onClick={handleOpenCVModal}
-              className="listLink"
-            >
-              CV{" "}
-            </List.Item>
-            <List.Item
-              icon={<Explorer103 variant="32x32_4" />}
-              onClick={handleOpenPhotoModal}
-              className="listLink"
-            >
-              Portfolio{" "}
-            </List.Item>
-            <List.Item
-              icon={<User variant="32x32_4" />}
-              onClick={handleOpenPhotoModal}
-              className="listLink"
-            >
-              Janne
-            </List.Item>
-            <List.Item
-              icon={<Mspaint variant="32x32_4" />}
-              onClick={handleOpenSkillsModal}
-              className="listLink"
-            >
-              Skills
-            </List.Item>
-            <List.Divider />
-            <List.Item
-              icon={<Textchat variant="32x32_4" />}
-              onClick={handleOpenAboutModal}
-              className="listLink"
-            >
-              Welcome
-            </List.Item>
-          </List>
-        }
-      />
-      <Shortcuts
-        openPortfolio={handleOpenPortfolioModal}
-        openCV={handleOpenCVModal}
-        openTunes={handleOpenTunesModal}
-      />
       {showPortfolioModal && (
         <Portfolio closePortfolio={handleClosePortfolioModal} />
       )}
