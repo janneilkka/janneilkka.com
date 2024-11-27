@@ -217,10 +217,13 @@ function Desktop() {
         </S.styledModal>
       )}
       {showSkillsModal && (
-        <Modal className="styledModal" closeModal={handleCloseSkillsModal}>
+        <Modal
+          className="styledModal"
+          closeModal={handleCloseSkillsModal}
           title={"Skills.txt"}
           titleBarOptions={<TitleBar.Close onClick={handleCloseSkillsModal} />}
-          icon={<Mspaint variant="16x16_4" />}>
+          icon={<Mspaint variant="16x16_4" />}
+        >
           <S.styledModalFrame bg="white" boxShadow="$in">
             <h1>Some of my skills</h1>
             <p>
