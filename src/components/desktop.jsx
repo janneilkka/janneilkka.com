@@ -23,6 +23,8 @@ import {
 import Portfolio from "./portfolio";
 import CV from "./cv";
 import Tunes from "./tunes";
+import About from "./about";
+import Skills from "./skills";
 import useModal from "./useModal";
 
 function Desktop() {
@@ -161,126 +163,8 @@ function Desktop() {
         openCV={handleOpenCVModal}
         openTunes={handleOpenTunesModal}
       />
-      {showAboutModal && (
-        <S.styledModal
-          icon={<Textchat variant="16x16_4" />}
-          title={"Welcome.txt"}
-          titleBarOptions={<TitleBar.Close onClick={handleCloseAboutModal} />}
-        >
-          <S.styledModalFrame bg="white" boxShadow="$in">
-            <h1>Hello!</h1>
-            <p>
-              I'm Janne, a designer of many talents from Helsinki. I've been
-              working lately with product development in many roles and domains:
-              from ecommerce, to public sector, to startups. I'm into structured
-              and systems oriented software development, where design is agile
-              and rapid.
-              <br />
-              This app, sort of a playground of ideas, has been built with Vite
-              and{" "}
-              <a
-                href="https://github.com/React95/React95"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                React95
-              </a>
-              , an open-source Windows95 component library for React. If you're
-              interested in this project even further check out the{" "}
-              <a
-                href="https://www.figma.com/community/file/1217110360892669474"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                React95 component library on Figma
-              </a>{" "}
-              that I made as a past-time project.
-            </p>
-            <p>
-              <a
-                href="https://windowswallpaper.miraheze.org/wiki/File:Clouds_(Windows_95).png"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Background
-              </a>{" "}
-              by WindowsAesthetics /{" "}
-              <a
-                href="https://creativecommons.org/licenses/by-sa/4.0/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC BY-SA 4.0
-              </a>
-            </p>
-          </S.styledModalFrame>
-        </S.styledModal>
-      )}
-      {showSkillsModal && (
-        <Modal
-          className="styledModal"
-          closeModal={handleCloseSkillsModal}
-          title={"Skills.txt"}
-          titleBarOptions={<TitleBar.Close onClick={handleCloseSkillsModal} />}
-          icon={<Mspaint variant="16x16_4" />}
-        >
-          <S.styledModalFrame bg="white" boxShadow="$in">
-            <h1>Some of my skills</h1>
-            <p>
-              I disagree with quantifying skills with numbers, percentages etc.
-              - are skills really something people can measure? However, here is
-              a rough estimate of my latest skills.
-            </p>
-            <br />
-            <hr />
-            <h2>Design tools</h2>
-            <h3>Figma, Sketch</h3>
-            <ProgressBar width={250} percent={90} />
-            <h3>Adobe CC</h3>
-            <ProgressBar width={250} percent={85} />
-            <h3>Prototyping, wireframing, user flows</h3>
-            <ProgressBar width={250} percent={80} />
-            <h3>User testing, interviewing</h3>
-            <ProgressBar width={250} percent={80} />
-            <h3>WCAG 2.1</h3>
-            <ProgressBar width={250} percent={75} />
-            <br />
-            <hr />
-            <h2>Dev tools</h2>
-            <h3>Storybook(JS)</h3>
-            <ProgressBar width={250} percent={75} />
-            <h3>HTML, CSS, SASS</h3>
-            <ProgressBar width={250} percent={75} />
-            <h3>Wordpress (PHP/Themes)</h3>
-            <ProgressBar width={250} percent={70} />
-            <h3>Git</h3>
-            <ProgressBar width={250} percent={60} />
-            <h3>Raspberry Pi & Arduino</h3>
-            <ProgressBar width={250} percent={30} />
-            <h3>React</h3>
-            <ProgressBar width={250} percent={30} />
-            <h3>Vue</h3>
-            <ProgressBar width={250} percent={15} />
-            <br />
-            <hr />
-            <h2>Other Skills</h2>
-            <li>Agile methods</li>
-            <li>Product development</li>
-            <li>Project management</li>
-            <li>Design systems</li>
-            <li>User interviews</li>
-            <li>User testing</li>
-            <li>Wireframing and prototyping</li>
-            <li>Visual design</li>
-            <li>Research</li>
-            <li>Copywriting and social media</li>
-            <li>Content creation</li>
-            <li>Workshops</li>
-            <li>Facilitation</li>
-            <li>Concept creation</li>
-          </S.styledModalFrame>
-        </Modal>
-      )}
+      {showAboutModal && <About closeAboutModal={handleCloseAboutModal} />}
+      {showSkillsModal && <Skills closeSkillsModal={handleCloseSkillsModal} />}
       {showPhotoModal && (
         <S.styledModal
           title={"janne_compressed_for_web.jpeg"}

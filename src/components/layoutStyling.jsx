@@ -13,13 +13,14 @@ export const device = {
 };
 
 export const styledModal = styled(Modal)`
+  max-height: 80vh;
   @media ${device.mobile} {
     margin: 5px;
     top: 0;
   }
   @media ${device.laptop} {
+    max-width: 600px;
     flex: none;
-    max-width: 700px;
     left: 80px;
     top: 80px;
   }
@@ -27,4 +28,5 @@ export const styledModal = styled(Modal)`
 
 export const styledModalFrame = styled(Modal.Content)`
   padding: 16px;
+  overflow-y: auto;
 `;

@@ -7,7 +7,10 @@ function Portfolio({ closePortfolio }) {
   return (
     <S.styledModal
       title="Portfolio.txt"
-      titleBarOptions={<TitleBar.Close onClick={closePortfolio} />}
+      titleBarOptions={[
+        <S.styledModal.Minimize />,
+        <TitleBar.Close onClick={closePortfolio} />,
+      ]}
       height="100%"
       icon={<Explorer103 variant="16x16_4" />}
     >
