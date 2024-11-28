@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleBar, Modal } from "@react95/core";
+import { TitleBar, Cursor } from "@react95/core";
 import { Explorer103 } from "@react95/icons";
 import * as S from "./layoutStyling";
 
@@ -23,7 +23,7 @@ function Portfolio({ closePortfolio }) {
           please contact me for a call and I'll present the learnings in more
           detail.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>B2C booking platform</h2>
         <h3>Anyhau Oy</h3>
         <span className="role">
@@ -50,7 +50,7 @@ function Portfolio({ closePortfolio }) {
           users to listen to their needs. During the time, we also tried Shape
           Up-method as an agile method with great learnings.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>The Voting Aid Machines</h2>
         <h3>Sanoma Media Finland</h3>
         <span className="role">Role: Lead Designer</span>
@@ -97,7 +97,7 @@ function Portfolio({ closePortfolio }) {
           Experience, World’s Best Digital Designer and Digital’s Best in Show,
           which will be announced the week following the competition.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Sokos eCommerce platform</h2>
         <h3>SOK Design</h3>
         <span className="role">Role: UX Designer</span>
@@ -127,7 +127,7 @@ function Portfolio({ closePortfolio }) {
           was kickstarting work regarding a consistent iconography with
           designers from several parts of the organisation.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Accessibility auditing</h2>
         <h3>
           National Land Survey of Finland (Maanmittauslaitos) & Patentti- ja
@@ -154,7 +154,7 @@ function Portfolio({ closePortfolio }) {
           interfaces using a variety of methods. I wrote accessibility reports
           and backlog tasks for both clients.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Website redesign & development</h2>
         <h3>Solidabis</h3>
         <span className="role">Role: Designer/Developer</span>
@@ -180,7 +180,7 @@ function Portfolio({ closePortfolio }) {
           new content for the website, including some iconography, plenty of
           copywriting and photography.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Accessibility audit</h2>
         <h3>Ruskeat tytöt</h3>
         <span className="role">Role: Accessibility expert (pro bono)</span>
@@ -203,7 +203,7 @@ function Portfolio({ closePortfolio }) {
           problems with accessibility. As a deliverable, I also provided an
           accessibility report, found on their website.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Maintenance website</h2>
         <h3>
           Patentti- ja rekisterihallitus / Finnish Patent and Registration
@@ -230,7 +230,7 @@ function Portfolio({ closePortfolio }) {
           department. I designed the elements and outlined the page which then
           complemented the style guide as an example page as well.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Edunsaaja-apuri accessibility fixes</h2>
         <h3>
           Patentti- ja rekisterihallitus / Finnish Patent and Registration
@@ -251,7 +251,7 @@ function Portfolio({ closePortfolio }) {
           and problems with the website which was done with JavaScript and
           HTML5&CSS. Most of the work was only code.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Auditor search service</h2>
         <h3>
           Patentti- ja rekisterihallitus / Finnish Patent and Registration
@@ -275,7 +275,7 @@ function Portfolio({ closePortfolio }) {
           a developing style guide and provided ideas for improvement for the
           design system as well.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Official PDF-document templates</h2>
         <h3>
           Patentti- ja rekisterihallitus / Finnish Patent and Registration
@@ -302,7 +302,7 @@ function Portfolio({ closePortfolio }) {
           readers and clarified the font usage and header levels, which were
           then delivered to the technical team as templates and instructions.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>
           Design System - Bootstrap 4 -styles, StorybookJS, Sketch-library
         </h2>
@@ -333,7 +333,7 @@ function Portfolio({ closePortfolio }) {
           it with a Sketch-library from scratch to support designers; a starting
           point of a design system for PRH.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Brand & Communications Guidelines</h2>
         <h3>Solidabis Oy</h3>
         <span className="role">Role: Designer</span>
@@ -356,7 +356,7 @@ function Portfolio({ closePortfolio }) {
           assets, such as an icon and font bank, Adobe CC color package, social
           media hashtags and automated marketing campaigns.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>Designer on various projects</h2>
         <h3>IBM</h3>
         <span className="role">Role: UX Designer</span>
@@ -379,7 +379,7 @@ function Portfolio({ closePortfolio }) {
           user interviews and tests, to collaboratively working with data
           scientists, developers and product owners on a daily basis.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>University of Helsinki Metro Station Visual Outlook</h2>
         <h3>HKL - Helsinki City Transportation</h3>
         <span className="role">Role: Visual Designer</span>
@@ -391,10 +391,12 @@ function Portfolio({ closePortfolio }) {
           anonymous and the submissions would be judged based on the artistic
           value and historical implications as well as timelessness. Together
           with a good friend of mine,{" "}
-          <a href="http://misaelrojas.com/">Misael Rojas</a>, we submitted an
-          artwork for the University of Helsinki metro station, which is one of
-          the three busiest metro stations in Helsinki due to its location near
-          the governmental, private enterprise hubs.
+          <a className={Cursor.Pointer} href="http://misaelrojas.com/">
+            Misael Rojas
+          </a>
+          , we submitted an artwork for the University of Helsinki metro
+          station, which is one of the three busiest metro stations in Helsinki
+          due to its location near the governmental, private enterprise hubs.
         </p>
         <h4>Outcome</h4>
         <p>
@@ -406,7 +408,7 @@ function Portfolio({ closePortfolio }) {
           station something new to look for and spot in their surroundings
           during their daily routines.
         </p>
-        <hr />
+        <hr color="gray" align="left" width="100%" />
         <h2>#Olotila Street Art Collaborative Installation</h2>
         <h3>City of Helsinki Urban Environment Division</h3>
         <span className="role">Role: Producer / Curator</span>

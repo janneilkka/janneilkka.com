@@ -9,6 +9,7 @@ const breakpoints = {
 
 export const device = {
   mobile: `(min-width: ${breakpoints.mobile})`,
+  tablet: `(min-width: ${breakpoints.tablet})`,
   laptop: `(min-width: ${breakpoints.laptop})`,
 };
 
@@ -18,9 +19,8 @@ export const styledModal = styled(Modal)`
     margin: 5px;
     top: 0;
   }
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     max-width: 600px;
-    flex: none;
     left: 80px;
     top: 80px;
   }

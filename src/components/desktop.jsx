@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  List,
-  Frame,
-  ProgressBar,
-  TaskBar,
-  TitleBar,
-  Modal,
-} from "@react95/core";
+import { List, Frame, Cursor, TaskBar, TitleBar, Modal } from "@react95/core";
 import Janne_pixelated from "../assets/janne_pixelated.png";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
@@ -75,7 +68,7 @@ function Desktop() {
     <>
       <TaskBar
         list={
-          <List>
+          <List width={"200px"}>
             <List.Item
               icon={<Progman34 variant="32x32_4" />}
               className="listLink"
@@ -87,9 +80,12 @@ function Desktop() {
                     as="a"
                     href={url}
                     key={id}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="listLink"
+                    className={Cursor.Pointer}
+                    style={{
+                      fontFamily: "MS Sans Serif",
+                      fontSize: 12,
+                      gap: 8,
+                    }}
                   >
                     {name}
                   </List.Item>
@@ -183,37 +179,45 @@ function Desktop() {
       )}
       {showVaporwaveModal && (
         <S.styledModal
-          closeModal={handleCloseVaporwaveModal}
           height="100%"
           icon={<CdMusic variant="16x16_4" />}
           width={340}
           title="My_Alter_Ego.doc"
+          titleBarOptions={[
+            <TitleBar.Close onClick={handleCloseVaporwaveModal} />,
+          ]}
         >
-          <h1>A Vaporwave Album</h1>
-          <p>
-            In 2018 I took part in a workshop in Lithuania at the Vilnius Art
-            Academy in producing a Vaporwave Album with participants coming in
-            from around Europe.
-          </p>
-          <p>
-            Over the course of the weekend we produced music videos, songs and
-            more. I produced two songs for the album and a music video. The
-            album can be found on streaming services.
-          </p>
-          <a href="https://open.spotify.com/album/0pCqTDsI4zOZXZJnxx2yPT?si=JW5qpLJJQsO3eK2m65FQBQ">
-            The album on Spotify
-          </a>
-          <p></p>
-          <br></br>
-          <div>
-            <iframe
-              src="https://www.youtube.com/embed/7SyxEF-QG_M"
-              width="100%"
-              title="A Song from a Vaporwave Album"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
+          <S.styledModalFrame bg="white" boxShadow="$in">
+            <h1>A Vaporwave Album</h1>
+            <p>
+              In 2018 I took part in a workshop in Lithuania at the Vilnius Art
+              Academy in producing a Vaporwave Album with participants coming in
+              from around Europe.
+            </p>
+            <p>
+              Over the course of the weekend we produced music videos, songs and
+              more. I produced two songs for the album and a music video. The
+              album can be found on streaming services.
+            </p>
+            <a
+              className={Cursor.Pointer}
+              href="https://open.spotify.com/album/0pCqTDsI4zOZXZJnxx2yPT?si=JW5qpLJJQsO3eK2m65FQBQ"
+            >
+              The album on Spotify
+            </a>
+            <br />
+            <hr color="gray" align="left" width="100%" />
+            <div>
+              <iframe
+                src="https://www.youtube.com/embed/7SyxEF-QG_M"
+                width="100%"
+                height={500}
+                title="A Song from a Vaporwave Album"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </S.styledModalFrame>
         </S.styledModal>
       )}
       {showPortfolioModal && (

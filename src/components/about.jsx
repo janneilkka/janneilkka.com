@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleBar } from "@react95/core";
+import { TitleBar, Cursor } from "@react95/core";
 import { Textchat } from "@react95/icons";
 import * as S from "./layoutStyling";
 
@@ -14,16 +14,17 @@ function About({ closeAboutModal }) {
         <h1>Hello!</h1>
         <p>
           I'm Janne, a designer of many talents from Helsinki. I've been working
-          lately with product development in many roles and domains: from
-          ecommerce, to public sector, to startups. I'm into structured and
-          systems oriented software development, where design is agile and
-          rapid.
+          with product development in a variety of roles and domains: from
+          eCommerce, to public sector, to startups, both in-house as well as
+          external. I'm into structured and systems oriented software
+          development, where design is agile and rapid.
           <br />
           This app, sort of a playground of ideas, has been built with Vite and{" "}
           <a
             href="https://github.com/React95/React95"
             target="_blank"
             rel="noopener noreferrer"
+            className={Cursor.Pointer}
           >
             React95
           </a>
@@ -33,6 +34,7 @@ function About({ closeAboutModal }) {
             href="https://www.figma.com/community/file/1217110360892669474"
             target="_blank"
             rel="noopener noreferrer"
+            className={Cursor.Pointer}
           >
             React95 component library on Figma
           </a>{" "}
@@ -43,6 +45,7 @@ function About({ closeAboutModal }) {
             href="https://windowswallpaper.miraheze.org/wiki/File:Clouds_(Windows_95).png"
             target="_blank"
             rel="noopener noreferrer"
+            className={Cursor.Pointer}
           >
             Background
           </a>{" "}
@@ -51,6 +54,7 @@ function About({ closeAboutModal }) {
             href="https://creativecommons.org/licenses/by-sa/4.0/"
             target="_blank"
             rel="noopener noreferrer"
+            className={Cursor.Pointer}
           >
             CC BY-SA 4.0
           </a>

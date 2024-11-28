@@ -24,25 +24,28 @@ h1 {
   font-family: "Jersey 15";
   font-weight: 500;
   font-size: 40px;
-  margin: 0;
+  margin: 8px 0 8px 0;
 }
 
 h2 {
   font-family: "Jersey 15";
   font-weight: 400;
   font-size: 30px;
+  margin: 8px 0 8px 0;
 }
 
 h3 {
   font-family: "Open Sans Semibold";
   font-weight: 200;
   font-size: 18px;
+  margin: 4px 0 4px 0;
 }
 
 h4 {
   font-family: "Open Sans Semibold";
   font-weight: 600;
   font-size: 16px;
+  margin: 8px 0 8px 0;
 }
 
 p,
@@ -50,6 +53,7 @@ a,
 li {
   font-family: "Open Sans";
   font-size: 14px;
+  margin: 8px 0 8px 0;
 }
 
 a {
@@ -70,13 +74,21 @@ br {
   display: block;
 }
 
+span {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 14px;
+  margin: 8px 0 8px 0;
+}
+
+hr {
+  margin: 16px 0 16px 0;
+}
+
 .listLink {
   font-family: "MS Sans Serif";
   font-size: 12px;
   gap: 8px;
-}
-.listLink:hover {
-  box-shadow: none;
 }
 
 .role {
