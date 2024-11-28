@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @font-face {
   font-family: "Jersey 15";
   src: url(../assets/Jersey15-Regular.ttf) format("truetype");
@@ -90,8 +92,8 @@ $breakpoints: (
 );
 
 @mixin device($device) {
-  @if map-has-key($breakpoints, $device) {
-    @media (min-width: #{map-get($breakpoints, $device)}) {
+  @if map.has-key($breakpoints, $device) {
+    @media (min-width: #{map.get($breakpoints, $device)}) {
       @content;
     }
   }
