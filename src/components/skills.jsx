@@ -24,56 +24,61 @@ function Skills({ closeSkillsModal }) {
           something people can measure? However, here is a rough estimate of
           some of my skills, in progress bar style.
         </p>
+        <p>
+          <hr color="gray" align="left" width="100%" />
+          <h2>Design tools</h2>
+          <h4>Figma, Sketch</h4>
+          <ProgressBar width={250} percent={90} />
+          <h4>Adobe CC</h4>
+          <ProgressBar width={250} percent={85} />
+          <h4>Design systems</h4>
+          <ProgressBar width={250} percent={85} />
+          <h4>Prototyping, wireframing, user flows</h4>
+          <ProgressBar width={250} percent={80} />
+          <h4>Usability testing, interviewing, user research</h4>
+          <ProgressBar width={250} percent={80} />
+          <h4>WCAG</h4>
+          <ProgressBar width={250} percent={80} />
+          <h4>Analytics</h4>
+          <ProgressBar width={250} percent={70} />
+        </p>
+
         <hr color="gray" align="left" width="100%" />
-        <h2>Design tools</h2>
-        <h4>Figma, Sketch</h4>
-        <ProgressBar width={250} percent={90} />
-        <h4>Adobe CC</h4>
-        <ProgressBar width={250} percent={85} />
-        <h4>Design systems</h4>
-        <ProgressBar width={250} percent={85} />
-        <h4>Prototyping, wireframing, user flows</h4>
-        <ProgressBar width={250} percent={80} />
-        <h4>Usability testing, interviewing, user research</h4>
-        <ProgressBar width={250} percent={80} />
-        <h4>WCAG</h4>
-        <ProgressBar width={250} percent={80} />
-        <h4>Analytics</h4>
-        <ProgressBar width={250} percent={70} />
-        <br />
+        <p>
+          <h2>Dev tools</h2>
+          <h4>Storybook(JS)</h4>
+          <ProgressBar width={250} percent={75} />
+          <h4>HTML, CSS, SASS</h4>
+          <ProgressBar width={250} percent={75} />
+          <h4>Wordpress (PHP/Themes)</h4>
+          <ProgressBar width={250} percent={70} />
+          <h4>Git</h4>
+          <ProgressBar width={250} percent={60} />
+          <h4>Raspberry Pi & Arduino</h4>
+          <ProgressBar width={250} percent={30} />
+          <h4>React</h4>
+          <ProgressBar width={250} percent={30} />
+          <h4>Vue</h4>
+          <ProgressBar width={250} percent={15} />
+        </p>
         <hr color="gray" align="left" width="100%" />
-        <h2>Dev tools</h2>
-        <h4>Storybook(JS)</h4>
-        <ProgressBar width={250} percent={75} />
-        <h4>HTML, CSS, SASS</h4>
-        <ProgressBar width={250} percent={75} />
-        <h4>Wordpress (PHP/Themes)</h4>
-        <ProgressBar width={250} percent={70} />
-        <h4>Git</h4>
-        <ProgressBar width={250} percent={60} />
-        <h4>Raspberry Pi & Arduino</h4>
-        <ProgressBar width={250} percent={30} />
-        <h4>React</h4>
-        <ProgressBar width={250} percent={30} />
-        <h4>Vue</h4>
-        <ProgressBar width={250} percent={15} />
-        <br />
-        <hr color="gray" align="left" width="100%" />
-        <h2>Other Skills</h2>
-        <li>Agile methods</li>
-        <li>Product development</li>
-        <li>Project management</li>
-        <li>Design systems</li>
-        <li>User interviews</li>
-        <li>User testing</li>
-        <li>Wireframing and prototyping</li>
-        <li>Visual design</li>
-        <li>Research</li>
-        <li>Copywriting and social media</li>
-        <li>Content creation</li>
-        <li>Workshops</li>
-        <li>Facilitation</li>
-        <li>Concept creation</li>
+        <p>
+          <h2>Other Skills</h2>
+          <li>Agile methods</li>
+          <li>Product development</li>
+          <li>Project management</li>
+          <li>Design systems</li>
+          <li>User interviews</li>
+          <li>User testing</li>
+          <li>Wireframing and prototyping</li>
+          <li>Visual design</li>
+          <li>Research</li>
+          <li>Copywriting and social media</li>
+          <li>Content creation</li>
+          <li>Workshops</li>
+          <li>Facilitation</li>
+          <li>Concept creation</li>
+        </p>
       </S.styledModalFrame>
     </S.styledModal>
   );

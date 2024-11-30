@@ -76,7 +76,13 @@ function Desktop() {
               Socials
               <List>
                 {socialMedia.map(({ id, name, url }) => (
-                  <a className="listLink" as="a" href={url} key={id}>
+                  <a
+                    className="listLink"
+                    as="a"
+                    target="_blank"
+                    href={url}
+                    key={id}
+                  >
                     <List.Item className={`${Cursor.Pointer} listLink`}>
                       {name}
                     </List.Item>
@@ -195,11 +201,11 @@ function Desktop() {
             </p>
             <a
               className={Cursor.Pointer}
+              target="_blank"
               href="https://open.spotify.com/album/0pCqTDsI4zOZXZJnxx2yPT?si=JW5qpLJJQsO3eK2m65FQBQ"
             >
               The album on Spotify
             </a>
-            <br />
             <hr color="gray" align="left" width="100%" />
             <div>
               <iframe

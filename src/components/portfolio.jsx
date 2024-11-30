@@ -81,7 +81,8 @@ function Portfolio({ closePortfolio }) {
           of voting aid machines as fast as possible when time is of the essence
           to being able to dig in as deep as possible and answering as many
           questions as user wants.
-          <br />
+        </p>
+        <p>
           As a nice bonus, the design won Bronze in the 45th annual creative
           competition in the Best of Database/Interface design category. The
           jury said the following: ”The judges praised the project for its
@@ -89,19 +90,12 @@ function Portfolio({ closePortfolio }) {
           elegance. They appreciated the effort put into making the wording easy
           to understand without compromising on depth.” In addition the app got
           an Award of Excellence from the jury in the Prod: New site, page, app
-          or other product category. <br />
-          The Best of News Design Creative Competition honors excellence in
-          visual storytelling, design and journalism produced in 2023. Winners
-          will be announced live during the competition except for our highest
-          honors, World’s Best Designed Newspaper, World’s Best Digital News
-          Experience, World’s Best Digital Designer and Digital’s Best in Show,
-          which will be announced the week following the competition.
+          or other product category.
         </p>
         <hr color="gray" align="left" width="100%" />
         <h2>Sokos eCommerce platform</h2>
         <h3>SOK Design</h3>
         <span className="role">Role: UX Designer</span>
-
         <h4>Background</h4>
         <p>
           During my post as a designer for Sokos, I was in charge of designing
@@ -391,7 +385,11 @@ function Portfolio({ closePortfolio }) {
           anonymous and the submissions would be judged based on the artistic
           value and historical implications as well as timelessness. Together
           with a good friend of mine,{" "}
-          <a className={Cursor.Pointer} href="http://misaelrojas.com/">
+          <a
+            className={Cursor.Pointer}
+            href="http://misaelrojas.com/"
+            target="_blank"
+          >
             Misael Rojas
           </a>
           , we submitted an artwork for the University of Helsinki metro

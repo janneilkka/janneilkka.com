@@ -20,7 +20,8 @@ function About({ closeAboutModal }) {
           eCommerce, to public sector, to startups, both in-house as well as
           external. I'm into structured and systems oriented software
           development, where design is agile and rapid.
-          <br />
+        </p>
+        <p>
           This app, sort of a playground of ideas, has been built with Vite and{" "}
           <a
             href="https://github.com/React95/React95"
