@@ -9,7 +9,7 @@ function Skills({ closeSkillsModal }) {
       className="styledModal"
       title={"Skills.txt"}
       titleBarOptions={[
-        <S.styledModal.Minimize />,
+        <S.styledModal.Minimize key="minimize" />,
         <TitleBar.Close onClick={closeSkillsModal} key="close" />,
       ]}
       icon={<Mspaint variant="16x16_4" />}

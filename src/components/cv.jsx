@@ -8,7 +8,7 @@ function CV({ closeCV }) {
     <S.styledModal
       title={"CV.txt"}
       titleBarOptions={[
-        <S.styledModal.Minimize />,
+        <S.styledModal.Minimize key="minimize" />,
         <TitleBar.Close onClick={closeCV} key="close" />,
       ]}
       height="100%"
