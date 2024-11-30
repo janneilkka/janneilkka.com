@@ -1,9 +1,9 @@
 import React from "react";
 import { Cursor } from "@react95/core";
 import "./styles.scss";
-import { Shell32133, Explorer103, CdMusic } from "@react95/icons";
+import { Shell32133, Explorer103, CdMusic, Mspaint } from "@react95/icons";
 
-function Shortcuts({ openPortfolio, openCV, openTunes }) {
+function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
   return (
     <div style={{ width: 100, marginLeft: 10, marginTop: 10 }}>
       <div className={Cursor.Pointer} onClick={() => openPortfolio()}>
@@ -55,6 +55,21 @@ function Shortcuts({ openPortfolio, openCV, openTunes }) {
           }}
         >
           Tunes
+        </p>
+      </div>
+      <div className={Cursor.Pointer} onClick={() => openPaint()}>
+        <Mspaint variant="32x32_4" style={{ marginLeft: 35, marginTop: 15 }} />
+        <p
+          style={{
+            fontFamily: "MS Sans Serif",
+            justifyContent: "center",
+            marginTop: 5,
+            width: 100,
+            textAlign: "center",
+            color: "black",
+          }}
+        >
+          Paint
         </p>
       </div>
     </div>
