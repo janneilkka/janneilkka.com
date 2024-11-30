@@ -9,7 +9,7 @@ function CV({ closeCV }) {
       title={"CV.txt"}
       titleBarOptions={[
         <S.styledModal.Minimize />,
-        <TitleBar.Close onClick={closeCV} />,
+        <TitleBar.Close onClick={closeCV} key="close" />,
       ]}
       height="100%"
       icon={<Shell32133 variant="16x16_4" />}

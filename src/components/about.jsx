@@ -8,7 +8,9 @@ function About({ closeAboutModal }) {
     <S.styledModal
       icon={<Textchat variant="16x16_4" />}
       title={"Welcome.txt"}
-      titleBarOptions={[<TitleBar.Close onClick={closeAboutModal} />]}
+      titleBarOptions={[
+        <TitleBar.Close onClick={closeAboutModal} key="close" />,
+      ]}
     >
       <S.styledModalFrame bg="white" boxShadow="$in">
         <h1>Hello!</h1>

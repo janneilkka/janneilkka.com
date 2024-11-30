@@ -7,7 +7,7 @@ function Tunes({ closeTunes }) {
   return (
     <S.styledModal
       title={"Tunes"}
-      titleBarOptions={<TitleBar.Close onClick={closeTunes} />}
+      titleBarOptions={<TitleBar.Close onClick={closeTunes} key="close" />}
       icon={<CdMusic variant="16x16_4" />}
     >
       <Frame>

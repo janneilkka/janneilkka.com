@@ -43,22 +43,22 @@ function Desktop() {
 
   const socialMedia = [
     {
-      id: 1,
+      id: 0,
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/janneilkka/",
     },
     {
-      id: 2,
+      id: 1,
       name: "Github",
       url: "https://www.github.com/janneilkka/",
     },
     {
-      id: 3,
+      id: 2,
       name: "Instagram",
       url: "https://instagram.com/janne.ilkka",
     },
     {
-      id: 4,
+      id: 3,
       name: "Spotify",
       url: "https://open.spotify.com/user/rogergregor",
     },
@@ -70,25 +70,17 @@ function Desktop() {
         list={
           <List width={"200px"}>
             <List.Item
-              icon={<Progman34 variant="32x32_4" />}
               className="listLink"
+              icon={<Progman34 variant="32x32_4" />}
             >
               Socials
               <List>
                 {socialMedia.map(({ id, name, url }) => (
-                  <List.Item
-                    as="a"
-                    href={url}
-                    key={id}
-                    className={Cursor.Pointer}
-                    style={{
-                      fontFamily: "MS Sans Serif",
-                      fontSize: 12,
-                      gap: 8,
-                    }}
-                  >
-                    {name}
-                  </List.Item>
+                  <a className="listLink" as="a" href={url} key={id}>
+                    <List.Item className={`${Cursor.Pointer} listLink`}>
+                      {name}
+                    </List.Item>
+                  </a>
                 ))}
               </List>
             </List.Item>
@@ -164,7 +156,9 @@ function Desktop() {
       {showPhotoModal && (
         <S.styledModal
           title={"janne_compressed_for_web.jpeg"}
-          titleBarOptions={<TitleBar.Close onClick={handleClosePhotoModal} />}
+          titleBarOptions={
+            <TitleBar.Close onClick={handleClosePhotoModal} key="close" />
+          }
           icon={<User variant="16x16_4" />}
         >
           <Frame boxShadow="none" className="fullWidthImage">
@@ -184,7 +178,7 @@ function Desktop() {
           width={340}
           title="My_Alter_Ego.doc"
           titleBarOptions={[
-            <TitleBar.Close onClick={handleCloseVaporwaveModal} />,
+            <TitleBar.Close onClick={handleCloseVaporwaveModal} key="close" />,
           ]}
         >
           <S.styledModalFrame bg="white" boxShadow="$in">

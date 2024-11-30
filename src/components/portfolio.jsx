@@ -9,7 +9,7 @@ function Portfolio({ closePortfolio }) {
       title="Portfolio.txt"
       titleBarOptions={[
         <S.styledModal.Minimize />,
-        <TitleBar.Close onClick={closePortfolio} />,
+        <TitleBar.Close onClick={closePortfolio} key="close" />,
       ]}
       height="100%"
       icon={<Explorer103 variant="16x16_4" />}

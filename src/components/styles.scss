@@ -91,6 +91,14 @@ hr {
   gap: 8px;
 }
 
+.listLink:hover {
+  font-family: "MS Sans Serif";
+  font-size: 12px;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: none;
+}
+
 .role {
   font-family: "Open Sans";
   font-size: 14px;
