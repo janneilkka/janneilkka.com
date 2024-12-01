@@ -13,13 +13,6 @@
   src: url(../assets/OpenSans-SemiBold.ttf) format("truetype");
 }
 
-.fullWidthImage {
-  height: 250px;
-  width: 250px;
-  top: 0;
-  left: 0;
-}
-
 h1 {
   font-family: "Jersey 15";
   font-weight: 500;
@@ -103,4 +96,11 @@ hr {
   font-family: "Open Sans";
   font-size: 14px;
   font-style: italic;
+}
+
+.fullWidthImage {
+  height: 250px;
+  width: 250px;
+  top: 0;
+  left: 0;
 }
