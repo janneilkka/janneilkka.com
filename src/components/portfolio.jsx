@@ -32,8 +32,8 @@ function Portfolio({ closePortfolio }) {
 
         <h4>Background</h4>
         <p>
-          Anyhau was a startup building a new marketplace that unites pet owners
-          and pet businesses. At the moment there is no well-functioning booking
+          Anyhau's aim is to build a new marketplace that unites pet owners and
+          pet businesses. At the moment there is no well-functioning booking
           platform that caters specifically to pet businesses’ unique needs in
           comparison to, for example, beauty salons. All the while all pet
           businesses handle bookings in their own methods ranging from Google
@@ -41,14 +41,15 @@ function Portfolio({ closePortfolio }) {
         </p>
         <h4>Solution</h4>
         <p>
-          I ran daily routines (dailies, weeklies, demos, refinements, feedbacks
-          etc.), seeing over the development work of the product, and kept all
-          stakeholders up to date on the progress. Meanwhile, I designed the
-          platform's MVP, multiple visual assets as well as coded some of the
-          frontend (such as a Material theme for the component library). During
-          the process I kept in close contact with both business and consumer
-          users to listen to their needs. During the time, we also tried Shape
-          Up-method as an agile method with great learnings.
+          I ran daily routines of the startup (dailies, weeklies, demos,
+          refinements, feedbacks etc.), seeing over the development work of the
+          product, and kept stakeholders up to date on the progress. Meanwhile,
+          I designed the platform's MVP, multiple visual assets as well as coded
+          some of the frontend (such as a Material theme for the component
+          library). During the process I kept in close contact with both
+          business and consumer users to listen to their needs. During the time,
+          I studied Basecamp's Shape Up-method which we implemented as our agile
+          software development method with great learnings.
         </p>
         <hr color="gray" align="left" width="100%" />
         <h2>The Voting Aid Machines</h2>
