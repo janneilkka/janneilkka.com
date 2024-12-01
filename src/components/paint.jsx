@@ -36,9 +36,9 @@ function Paint({ closePaint }) {
     <>
       {showAlert && (
         <Alert
-          title="Warning"
+          title="Error"
           type="error"
-          message="Paint has the best user experience desktop devices. Please open this on a desktop device."
+          message="Paint has the best user experience on desktop devices. Please open this on a larger screen."
           titleBarOptions={
             <TitleBar.Close key="close" onClick={handleCloseAlert} />
           }

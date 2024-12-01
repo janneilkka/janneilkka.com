@@ -15,11 +15,13 @@ function About({ closeAboutModal }) {
       <S.styledModalFrame bg="white" boxShadow="$in">
         <h1>Hello!</h1>
         <p>
-          I'm Janne, a designer of many talents from Helsinki. I've been working
-          with product development in a variety of roles and domains: from
-          eCommerce, to public sector, to startups, both in-house as well as
-          external. I'm into structured and systems oriented software
-          development, where design is agile and rapid.
+          I'm Janne, a design generalist. I've been working with product
+          development in a variety of roles and domains, both as an in-house
+          professional and as an external consultant: e.g. eCommerce, public
+          sector, startups, journalism to mention a few. I'm into structured and
+          systems oriented software development, where design is agile and
+          rapid. I like to get my hands dirty with the front-end of things;
+          design engineering you could say.
         </p>
         <p>
           This app, sort of a playground of ideas, has been built with Vite and{" "}
