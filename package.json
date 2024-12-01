@@ -4,21 +4,14 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.11.6",
     "@react95/clippy": "^2.0.2",
     "@react95/core": "^9.2.1",
     "@react95/icons": "^2.0.4",
     "@vitejs/plugin-react": "^4.3.4",
-    "babel-loader": "^9.2.1",
-    "eslint": "^9.15.0",
-    "prop-types": "^15.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-iframe": "^1.8.0",
-    "react-player": "^2.6.2",
     "sass": "^1.81.0",
     "styled-components": "^6.1.13",
-    "styled-media-query": "^2.1.2",
     "vite": "^6.0.1",
     "yarn": "^1.22.10"
   },
@@ -45,8 +38,9 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-react-app": "^7.0.1",
     "gh-pages": "^6.2.0",
-    "prettier": "3.4.1"
+    "vite-plugin-eslint": "^1.8.1"
   }
 }
