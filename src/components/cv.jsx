@@ -6,13 +6,13 @@ import * as S from "./layoutStyling";
 function CV({ closeCV }) {
   return (
     <S.styledModal
+      icon={<Shell32133 variant="16x16_4" />}
       title={"CV.txt"}
       titleBarOptions={[
         <S.styledModal.Minimize key="minimize" />,
         <TitleBar.Close onClick={closeCV} key="close" />,
       ]}
       height="100%"
-      icon={<Shell32133 variant="16x16_4" />}
     >
       <S.styledModalFrame bg="white" boxShadow="$in">
         <h1>Curriculum Vitae</h1>
@@ -124,7 +124,7 @@ function CV({ closeCV }) {
             rel="noopener noreferrer"
             className={Cursor.Pointer}
           >
-            Carbon design system
+            Carbon Design System
           </a>
           , therefore increasing consistency and scaling with demos.
         </p>
@@ -171,7 +171,7 @@ function CV({ closeCV }) {
           <li>English</li>
           <li>Spanish</li>
         </ul>
-        <p>Elementary knowledge in following</p>
+        <p>Elementary knowledge in following:</p>
         <ul>
           <li>French</li>
           <li>Swedish</li>

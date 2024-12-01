@@ -14,6 +14,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
         <p
           style={{
             fontFamily: "MS Sans Serif",
+            fontSize: 13,
             justifyContent: "center",
             marginTop: 5,
             width: 100,
@@ -21,7 +22,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
             color: "black",
           }}
         >
-          Portfolio.txt
+          Portfolio
         </p>
       </div>
       <div className={Cursor.Pointer} onClick={() => openCV()}>
@@ -32,6 +33,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
         <p
           style={{
             fontFamily: "MS Sans Serif",
+            fontSize: 13,
             justifyContent: "center",
             marginTop: 5,
             width: 100,
@@ -39,7 +41,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
             color: "black",
           }}
         >
-          CV.txt
+          CV
         </p>
       </div>
       <div className={Cursor.Pointer} onClick={() => openTunes()}>
@@ -47,6 +49,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
         <p
           style={{
             fontFamily: "MS Sans Serif",
+            fontSize: 13,
             justifyContent: "center",
             marginTop: 5,
             width: 100,
@@ -62,6 +65,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
         <p
           style={{
             fontFamily: "MS Sans Serif",
+            fontSize: 13,
             justifyContent: "center",
             marginTop: 5,
             width: 100,

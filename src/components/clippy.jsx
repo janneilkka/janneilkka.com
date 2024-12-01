@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useClippy } from "@react95/clippy";
-import { Button } from "@react95/core";
 
 const talks = [
-  "Hello! How can I assist you today?",
-  "Did you know you can customize me?",
-  "I'm here to help you with anything you need!",
+  "Hello! Nice to see you here today! Hope you have a great day.",
+  "Wuff wuff! Or Hau hau as we say in Finnish!",
+  "Check out more information from the Start-menu.",
 ];
 
 const Clippy = () => {
@@ -14,24 +13,24 @@ const Clippy = () => {
 
   useEffect(() => {
     if (clippy) {
-      console.log("Clippy loaded:", clippy);
       setAgent(clippy);
       clippy.show();
     }
   }, [clippy]);
 
-  const handleClippyClick = () => {
+  useEffect(() => {
     if (agent) {
-      console.log("Clippy clicked:", agent);
-      const randomTalk = talks[Math.floor(Math.random() * talks.length)];
-      agent.speak(randomTalk);
-      agent.animate();
-    } else {
-      console.log("Agent not available");
-    }
-  };
+      const interval = setInterval(() => {
+        const randomTalk = talks[Math.floor(Math.random() * talks.length)];
+        agent.speak(randomTalk);
+        agent.animate();
+      }, 100000);
 
-  return <div onClick={handleClippyClick} style={{ cursor: "pointer" }} />;
+      return () => clearInterval(interval);
+    }
+  }, [agent]);
+
+  return <div style={{ cursor: "pointer" }}></div>;
 };
 
 export default Clippy;

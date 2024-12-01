@@ -1,6 +1,6 @@
 import React from "react";
 import { TitleBar, ProgressBar } from "@react95/core";
-import { Mspaint } from "@react95/icons";
+import { Shell3236 } from "@react95/icons";
 import * as S from "./layoutStyling";
 
 function Skills({ closeSkillsModal }) {
@@ -12,7 +12,7 @@ function Skills({ closeSkillsModal }) {
         <S.styledModal.Minimize key="minimize" />,
         <TitleBar.Close onClick={closeSkillsModal} key="close" />,
       ]}
-      icon={<Mspaint variant="16x16_4" />}
+      icon={<Shell3236 variant="16x16_4" />}
     >
       <S.styledModalFrame bg="white" boxShadow="$in">
         <h1>Some of my skills</h1>
@@ -24,46 +24,41 @@ function Skills({ closeSkillsModal }) {
           something people can measure? However, here is a rough estimate of
           some of my skills, in progress bar style.
         </p>
-        <p>
-          <hr color="gray" align="left" width="100%" />
-          <h2>Design tools</h2>
-          <h4>Figma, Sketch</h4>
-          <ProgressBar width={250} percent={90} />
-          <h4>Adobe CC</h4>
-          <ProgressBar width={250} percent={85} />
-          <h4>Design systems</h4>
-          <ProgressBar width={250} percent={85} />
-          <h4>Prototyping, wireframing, user flows</h4>
-          <ProgressBar width={250} percent={80} />
-          <h4>Usability testing, interviewing, user research</h4>
-          <ProgressBar width={250} percent={80} />
-          <h4>WCAG</h4>
-          <ProgressBar width={250} percent={80} />
-          <h4>Analytics</h4>
-          <ProgressBar width={250} percent={70} />
-        </p>
-
         <hr color="gray" align="left" width="100%" />
-        <p>
-          <h2>Dev tools</h2>
-          <h4>Storybook(JS)</h4>
-          <ProgressBar width={250} percent={75} />
-          <h4>HTML, CSS, SASS</h4>
-          <ProgressBar width={250} percent={75} />
-          <h4>Wordpress (PHP/Themes)</h4>
-          <ProgressBar width={250} percent={70} />
-          <h4>Git</h4>
-          <ProgressBar width={250} percent={60} />
-          <h4>Raspberry Pi & Arduino</h4>
-          <ProgressBar width={250} percent={30} />
-          <h4>React</h4>
-          <ProgressBar width={250} percent={30} />
-          <h4>Vue</h4>
-          <ProgressBar width={250} percent={15} />
-        </p>
+        <h2>Design tools</h2>
+        <h4>Figma, Sketch</h4>
+        <ProgressBar width={250} percent={95} />
+        <h4>Adobe CC</h4>
+        <ProgressBar width={250} percent={85} />
+        <h4>Design systems</h4>
+        <ProgressBar width={250} percent={85} />
+        <h4>Prototyping, wireframing, user flows</h4>
+        <ProgressBar width={250} percent={80} />
+        <h4>Usability testing, interviewing, user research</h4>
+        <ProgressBar width={250} percent={80} />
+        <h4>WCAG, accessibility testing</h4>
+        <ProgressBar width={250} percent={80} />
+        <h4>Analytics</h4>
+        <ProgressBar width={250} percent={70} />
+        <div style={{ margin: "8px" }} />
         <hr color="gray" align="left" width="100%" />
-        <p>
-          <h2>Other Skills</h2>
+        <h2>Dev tools</h2>
+        <h4>Storybook(JS)</h4>
+        <ProgressBar width={250} percent={75} />
+        <h4>HTML, CSS, SASS</h4>
+        <ProgressBar width={250} percent={75} />
+        <h4>Wordpress (PHP/Themes)</h4>
+        <ProgressBar width={250} percent={70} />
+        <h4>Git</h4>
+        <ProgressBar width={250} percent={70} />
+        <h4>React</h4>
+        <ProgressBar width={250} percent={45} />
+        <h4>Vue</h4>
+        <ProgressBar width={250} percent={15} />
+        <div style={{ margin: "8px" }} />
+        <hr color="gray" align="left" width="100%" />
+        <h2>Other Skills</h2>
+        <ul>
           <li>Agile methods</li>
           <li>Product development</li>
           <li>Project management</li>
@@ -78,7 +73,7 @@ function Skills({ closeSkillsModal }) {
           <li>Workshops</li>
           <li>Facilitation</li>
           <li>Concept creation</li>
-        </p>
+        </ul>
       </S.styledModalFrame>
     </S.styledModal>
   );

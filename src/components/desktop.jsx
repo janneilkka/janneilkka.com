@@ -1,11 +1,11 @@
 import React from "react";
-import { List, Frame, Cursor, TaskBar, TitleBar, Modal } from "@react95/core";
+import { List, Frame, Cursor, TaskBar, TitleBar } from "@react95/core";
 import Janne_pixelated from "../assets/janne_pixelated.png";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
 import "./styles.scss";
 import {
-  Mspaint,
+  Shell3236,
   User,
   CdMusic,
   Progman34,
@@ -98,7 +98,7 @@ function Desktop() {
               className="listLink"
             >
               Tunes
-              <List>
+              <List width={"200px"}>
                 <List.Item
                   onClick={handleOpenVaporwaveModal}
                   icon={<CdMusic variant="16x16_4" />}
@@ -137,7 +137,7 @@ function Desktop() {
               Janne
             </List.Item>
             <List.Item
-              icon={<Mspaint variant="32x32_4" />}
+              icon={<Shell3236 variant="32x32_4" />}
               onClick={handleOpenSkillsModal}
               className="listLink"
             >
