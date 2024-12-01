@@ -9,7 +9,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
       <div className={Cursor.Pointer} onClick={() => openPortfolio()}>
         <Explorer103
           variant="32x32_4"
-          style={{ marginLeft: 35, marginTop: 15 }}
+          style={{ marginLeft: 32, marginTop: 15 }}
         />
         <p
           style={{
@@ -28,7 +28,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
       <div className={Cursor.Pointer} onClick={() => openCV()}>
         <Shell32133
           variant="32x32_4"
-          style={{ marginLeft: 35, marginTop: 15 }}
+          style={{ marginLeft: 32, marginTop: 15 }}
         />
         <p
           style={{
@@ -45,7 +45,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
         </p>
       </div>
       <div className={Cursor.Pointer} onClick={() => openTunes()}>
-        <CdMusic variant="32x32_4" style={{ marginLeft: 35, marginTop: 15 }} />
+        <CdMusic variant="32x32_4" style={{ marginLeft: 32, marginTop: 15 }} />
         <p
           style={{
             fontFamily: "MS Sans Serif",
@@ -61,7 +61,7 @@ function Shortcuts({ openPortfolio, openCV, openTunes, openPaint }) {
         </p>
       </div>
       <div className={Cursor.Pointer} onClick={() => openPaint()}>
-        <Mspaint variant="32x32_4" style={{ marginLeft: 35, marginTop: 15 }} />
+        <Mspaint variant="32x32_4" style={{ marginLeft: 32, marginTop: 15 }} />
         <p
           style={{
             fontFamily: "MS Sans Serif",
