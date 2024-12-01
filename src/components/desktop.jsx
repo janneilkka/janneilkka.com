@@ -1,19 +1,11 @@
-import React, { useState, useCallback } from "react";
-import {
-  GlobalStyle,
-  ThemeProvider,
-  List,
-  Frame,
-  ProgressBar,
-  TaskBar,
-} from "@react95/core";
-import Janne_pixelated from "../janne_pixelated.png";
-import socialMedia from "./socialMedia";
+import React from "react";
+import { List, Frame, Cursor, TaskBar, TitleBar } from "@react95/core";
+import Janne_pixelated from "../assets/janne_pixelated.png";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
 import "./styles.scss";
 import {
-  Mspaint,
+  Shell3236,
   User,
   CdMusic,
   Progman34,
@@ -24,297 +16,80 @@ import {
 import Portfolio from "./portfolio";
 import CV from "./cv";
 import Tunes from "./tunes";
+import About from "./about";
+import Skills from "./skills";
+import Paint from "./paint";
+import useModal from "./useModal";
 
 function Desktop() {
-  /* Mobile detection */
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
+  const [showAboutModal, handleOpenAboutModal, handleCloseAboutModal] =
+    useModal(true);
+  const [showSkillsModal, handleOpenSkillsModal, handleCloseSkillsModal] =
+    useModal(false);
+  const [showPhotoModal, handleOpenPhotoModal, handleClosePhotoModal] =
+    useModal(false);
+  const [
+    showVaporwaveModal,
+    handleOpenVaporwaveModal,
+    handleCloseVaporwaveModal,
+  ] = useModal(false);
+  const [
+    showPortfolioModal,
+    handleOpenPortfolioModal,
+    handleClosePortfolioModal,
+  ] = useModal(false);
+  const [showCVModal, handleOpenCVModal, handleCloseCVModal] = useModal(false);
+  const [showTunesModal, handleOpenTunesModal, handleCloseTunesModal] =
+    useModal(false);
+  const [showPaintModal, handleOpenPaintModal, handleClosePaintModal] =
+    useModal(false);
 
-  const [items] = useState([]);
-
-  /* Welcome Modal */
-  const [showAboutModal, setShowAboutModal] = useState(true);
-  const handleOpenAboutModal = useCallback(() => {
-    setShowAboutModal(true);
-  }, []);
-  const handleCloseAboutModal = useCallback(() => {
-    setShowAboutModal(false);
-  }, []);
-
-  /* Skills Modal */
-  const [showSkillsModal, setShowSkillsModal] = useState(false);
-  const handleOpenSkillsModal = useCallback(() => {
-    setShowSkillsModal(true);
-  }, []);
-  const handleCloseSkillsModal = useCallback(() => {
-    setShowSkillsModal(false);
-  }, []);
-
-  /* Photo Modal */
-  const [showPhotoModal, setShowPhotoModal] = useState(false);
-  const handleOpenPhotoModal = useCallback(() => {
-    setShowPhotoModal(true);
-  }, []);
-  const handleClosePhotoModal = useCallback(() => {
-    setShowPhotoModal(false);
-  }, []);
-
-  /* Vaporwave Modal 1 */
-  const [showVaporwaveModal1, setShowVaporwaveModal1] = useState(false);
-  const handleOpenVaporwaveModal1 = useCallback(() => {
-    setShowVaporwaveModal1(true);
-  }, []);
-  const handleCloseVaporwaveModal1 = useCallback(() => {
-    setShowVaporwaveModal1(false);
-  }, []);
-
-  /* Portfolio Shortcut */
-  const closePortfolio = () => {
-    togglePortfolio(false);
-  };
-
-  const openPortfolio = () => {
-    togglePortfolio(true);
-  };
-  const [explorerOpened, togglePortfolio] = useState(false);
-
-  /* CV Shortcut */
-
-  const closeCV = () => {
-    toggleCV(false);
-  };
-
-  const openCV = () => {
-    toggleCV(true);
-  };
-
-  const [cvOpened, toggleCV] = useState(false);
-
-  /* Tunes Shortcut */
-
-  const closeTunes = () => {
-    toggleTunes(false);
-  };
-
-  const openTunes = () => {
-    toggleTunes(true);
-  };
-
-  const [tunesOpened, toggleTunes] = useState(false);
+  const socialMedia = [
+    {
+      id: 0,
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/janneilkka/",
+    },
+    {
+      id: 1,
+      name: "Github",
+      url: "https://www.github.com/janneilkka/",
+    },
+    {
+      id: 2,
+      name: "Instagram",
+      url: "https://instagram.com/janne.ilkka",
+    },
+    {
+      id: 3,
+      name: "Spotify",
+      url: "https://open.spotify.com/user/rogergregor",
+    },
+  ];
 
   return (
-    <ThemeProvider theme="millenium">
-      <GlobalStyle></GlobalStyle>
-      {showAboutModal && (
-        <S.layoutMain
-          isMobile={isMobile}
-          icon={<Textchat variant="32x32_4" />}
-          title={"Welcome.txt"}
-          closeModal={handleCloseAboutModal}
-        >
-          <S.layoutMainContent bg="white" boxShadow="out">
-            <S.textModal>
-              <h1>Hello!</h1>
-              <p>
-                I'm Janne, a designer of many talents from Helsinki. I've been
-                working lately with product development in many roles and
-                domains: from ecommerce, to public sector, to startups. I'm into
-                structured and systems oriented software development, where
-                design is agile and rapid.
-                <br />
-                This app, sort of a playground of ideas, has been built with
-                Create React App and{" "}
-                <a
-                  href="https://github.com/React95/React95"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  React95
-                </a>
-                , an open-source Windows95 component library for React. If
-                you're interested in this project even further check out the{" "}
-                <a
-                  href="https://www.figma.com/community/file/1217110360892669474"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  React95 component library on Figma
-                </a>{" "}
-                that I made as a past-time project.
-              </p>
-              <p>
-                <a
-                  href="https://windowswallpaper.miraheze.org/wiki/File:Clouds_(Windows_95).png"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Background
-                </a>{" "}
-                by WindowsAesthetics /{" "}
-                <a
-                  href="https://creativecommons.org/licenses/by-sa/4.0/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  CC BY-SA 4.0
-                </a>
-              </p>
-            </S.textModal>
-          </S.layoutMainContent>
-        </S.layoutMain>
-      )}
-      {showSkillsModal && (
-        <S.layoutMain
-          isMobile={isMobile}
-          title={"Skills.txt"}
-          closeModal={handleCloseSkillsModal}
-          icon={<Mspaint variant="32x32_4" />}
-        >
-          <S.layoutMainContent bg="white" boxShadow="in">
-            <S.textModal>
-              <h1>Some of my skills</h1>
-              <p>
-                I disagree with quantifying skills with numbers, percentages
-                etc. - are skills really something people can measure? However,
-                here is a rough estimate of my latest skills.
-              </p>
-              <br />
-              <hr />
-              <h2>Design tools</h2>
-              <h3>Figma, Sketch</h3>
-              <ProgressBar width={250} percent={90} />
-              <h3>Adobe CC</h3>
-              <ProgressBar width={250} percent={85} />
-              <h3>Prototyping, wireframing, user flows</h3>
-              <ProgressBar width={250} percent={80} />
-              <h3>User testing, interviewing</h3>
-              <ProgressBar width={250} percent={80} />
-              <h3>WCAG 2.1</h3>
-              <ProgressBar width={250} percent={75} />
-              <br />
-              <hr />
-              <h2>Dev tools</h2>
-              <h3>Storybook(JS)</h3>
-              <ProgressBar width={250} percent={75} />
-              <h3>HTML, CSS, SASS</h3>
-              <ProgressBar width={250} percent={75} />
-              <h3>Wordpress (PHP/Themes)</h3>
-              <ProgressBar width={250} percent={70} />
-              <h3>Git</h3>
-              <ProgressBar width={250} percent={60} />
-              <h3>Raspberry Pi & Arduino</h3>
-              <ProgressBar width={250} percent={30} />
-              <h3>React</h3>
-              <ProgressBar width={250} percent={30} />
-              <h3>Vue</h3>
-              <ProgressBar width={250} percent={15} />
-              <br />
-              <hr />
-              <h2>Other Skills</h2>
-              <li>Agile methods</li>
-              <li>Product development</li>
-              <li>Project management</li>
-              <li>Design systems</li>
-              <li>User interviews</li>
-              <li>User testing</li>
-              <li>Wireframing and prototyping</li>
-              <li>Visual design</li>
-              <li>Research</li>
-              <li>Copywriting and social media</li>
-              <li>Content creation</li>
-              <li>Workshops</li>
-              <li>Facilitation</li>
-              <li>Concept creation</li>
-            </S.textModal>
-          </S.layoutMainContent>
-        </S.layoutMain>
-      )}
-      {showPhotoModal && (
-        <S.layoutMain
-          isMobile={isMobile}
-          title={"janne_compressed_for_web.jpeg"}
-          closeModal={handleClosePhotoModal}
-          icon={<User variant="32x32_4" />}
-        >
-          <Frame
-            boxShadow="none"
-            style={{
-              margin: "auto",
-            }}
-          >
-            <img
-              src={Janne_pixelated}
-              aria-hidden
-              alt="Janne as a pixelated image"
-              className="full-width-image"
-            ></img>
-          </Frame>
-          <div className="image-text">
-            <p>janne_compressed_for_web.jpeg</p>
-          </div>
-        </S.layoutMain>
-      )}
-      {showVaporwaveModal1 && (
-        <S.layoutMain
-          isMobile={isMobile}
-          closeModal={handleCloseVaporwaveModal1}
-          height="100%"
-          icon={<CdMusic variant="32x32_4" />}
-          width={340}
-          title="My_Alter_Ego.doc"
-        >
-          <S.textModal>
-            <h1>A Vaporwave Album</h1>
-            <p>
-              In 2018 I took part in a workshop in Lithuania at the Vilnius Art
-              Academy in producing a Vaporwave Album with participants coming in
-              from around Europe.
-            </p>
-            <p>
-              Over the course of the weekend we produced music videos, songs and
-              more. I produced two songs for the album and a music video. The
-              album can be found on streaming services.
-            </p>
-            <a href="https://open.spotify.com/album/0pCqTDsI4zOZXZJnxx2yPT?si=JW5qpLJJQsO3eK2m65FQBQ">
-              The album on Spotify
-            </a>
-            <p></p>
-            <br></br>
-            <div>
-              <iframe
-                src="https://www.youtube.com/embed/7SyxEF-QG_M"
-                width="100%"
-                title="A Song from a Vaporwave Album"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </S.textModal>
-        </S.layoutMain>
-      )}
+    <>
       <TaskBar
         list={
-          <List>
+          <List width={"200px"}>
             <List.Item
-              icon={<Progman34 variant="32x32_4" />}
               className="listLink"
+              icon={<Progman34 variant="32x32_4" />}
             >
               Socials
               <List>
-                {socialMedia.map(({ icon, name, url }) => (
-                  <List.Item
-                    as="a"
-                    href={url}
-                    icon={icon}
-                    key={name}
-                    rel="noopener noreferrer"
-                    target="_blank"
+                {socialMedia.map(({ id, name, url }) => (
+                  <a
                     className="listLink"
+                    as="a"
+                    target="_blank"
+                    href={url}
+                    key={id}
                   >
-                    {name}
-                  </List.Item>
+                    <List.Item className={`${Cursor.Pointer} listLink`}>
+                      {name}
+                    </List.Item>
+                  </a>
                 ))}
               </List>
             </List.Item>
@@ -323,17 +98,17 @@ function Desktop() {
               className="listLink"
             >
               Tunes
-              <List>
+              <List width={"200px"}>
                 <List.Item
-                  onClick={handleOpenVaporwaveModal1}
-                  icon={<CdMusic variant="32x32_4" />}
+                  onClick={handleOpenVaporwaveModal}
+                  icon={<CdMusic variant="16x16_4" />}
                   className="listLink"
                 >
                   Janne's Vaporwave Story from 2018
                 </List.Item>
                 <List.Item
-                  onClick={openTunes}
-                  icon={<CdMusic variant="32x32_4" />}
+                  onClick={handleOpenTunesModal}
+                  icon={<CdMusic variant="16x16_4" />}
                   className="listLink"
                 >
                   Janne's Ultimate House Playlist on Spotify
@@ -342,14 +117,14 @@ function Desktop() {
             </List.Item>
             <List.Item
               icon={<Awfxcg321303 variant="32x32_4" />}
-              onClick={openCV}
+              onClick={handleOpenCVModal}
               className="listLink"
             >
               CV{" "}
             </List.Item>
             <List.Item
               icon={<Explorer103 variant="32x32_4" />}
-              onClick={openPortfolio}
+              onClick={handleOpenPortfolioModal}
               className="listLink"
             >
               Portfolio{" "}
@@ -362,7 +137,7 @@ function Desktop() {
               Janne
             </List.Item>
             <List.Item
-              icon={<Mspaint variant="32x32_4" />}
+              icon={<Shell3236 variant="32x32_4" />}
               onClick={handleOpenSkillsModal}
               className="listLink"
             >
@@ -379,25 +154,83 @@ function Desktop() {
           </List>
         }
       />
-      <React.Fragment>
-        <Shortcuts
-          openPortfolio={openPortfolio}
-          openCV={openCV}
-          openTunes={openTunes}
-        />
-        {explorerOpened && (
-          <Portfolio
-            items={items}
-            closePortfolio={closePortfolio}
-            isMobile={isMobile}
-          />
-        )}
-        {cvOpened && <CV items={items} closeCV={closeCV} isMobile={isMobile} />}
-        {tunesOpened && (
-          <Tunes items={items} closeTunes={closeTunes} isMobile={isMobile} />
-        )}
-      </React.Fragment>
-    </ThemeProvider>
+
+      <Shortcuts
+        openPortfolio={handleOpenPortfolioModal}
+        openCV={handleOpenCVModal}
+        openTunes={handleOpenTunesModal}
+        openPaint={handleOpenPaintModal}
+      />
+      {showAboutModal && <About closeAboutModal={handleCloseAboutModal} />}
+      {showSkillsModal && <Skills closeSkillsModal={handleCloseSkillsModal} />}
+      {showPhotoModal && (
+        <S.styledModal
+          title={"janne_compressed_for_web.jpeg"}
+          titleBarOptions={
+            <TitleBar.Close onClick={handleClosePhotoModal} key="close" />
+          }
+          icon={<User variant="16x16_4" />}
+        >
+          <Frame boxShadow="none" className="fullWidthImage">
+            <img
+              src={Janne_pixelated}
+              aria-hidden
+              alt="Janne as a pixelated image"
+              className="fullWidthImage"
+            ></img>
+          </Frame>
+        </S.styledModal>
+      )}
+      {showVaporwaveModal && (
+        <S.styledModal
+          height="100%"
+          icon={<CdMusic variant="16x16_4" />}
+          width={340}
+          title="My_Alter_Ego.doc"
+          titleBarOptions={[
+            <TitleBar.Close onClick={handleCloseVaporwaveModal} key="close" />,
+          ]}
+        >
+          <S.styledModalFrame bg="white" boxShadow="$in">
+            <h1>A Vaporwave Album</h1>
+            <p>
+              In 2018 I took part in a workshop in Lithuania at the Vilnius Art
+              Academy in producing a Vaporwave Album with participants coming in
+              from around Europe.
+            </p>
+            <p>
+              Over the course of the weekend we produced music videos, songs and
+              more. I produced two songs for the album and a music video. The
+              album can be found on streaming services.
+            </p>
+            <a
+              className={Cursor.Pointer}
+              target="_blank"
+              href="https://open.spotify.com/album/0pCqTDsI4zOZXZJnxx2yPT?si=JW5qpLJJQsO3eK2m65FQBQ"
+            >
+              The album on Spotify
+            </a>
+            <hr color="gray" align="left" width="100%" />
+            <div>
+              <iframe
+                src="https://www.youtube.com/embed/7SyxEF-QG_M"
+                width="100%"
+                height={500}
+                title="A Song from a Vaporwave Album"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </S.styledModalFrame>
+        </S.styledModal>
+      )}
+      {showPortfolioModal && (
+        <Portfolio closePortfolio={handleClosePortfolioModal} />
+      )}
+      {showCVModal && <CV closeCV={handleCloseCVModal} />}
+      {showTunesModal && <Tunes closeTunes={handleCloseTunesModal} />}
+      {showPaintModal && <Paint closePaint={handleClosePaintModal} />}
+    </>
   );
 }
 

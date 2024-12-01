@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @font-face {
   font-family: "Jersey 15";
   src: url(../assets/Jersey15-Regular.ttf) format("truetype");
@@ -11,53 +13,32 @@
   src: url(../assets/OpenSans-SemiBold.ttf) format("truetype");
 }
 
-.full-width-image {
-  height: 250px;
-  width: 250px;
-  top: 0;
-  left: 0;
-}
-
-.image-text {
-  margin: auto;
-  padding-top: 5px;
-}
-
-.full-screen {
-  flex-direction: column;
-  margin: 1rem 1rem 0 0.5rem;
-  top: 0;
-  width: stretch;
-}
-
-.centered {
-  text-align: center;
-  margin: auto;
-}
-
 h1 {
   font-family: "Jersey 15";
   font-weight: 500;
   font-size: 40px;
-  margin: 0;
+  margin: 8px 0 8px 0;
 }
 
 h2 {
   font-family: "Jersey 15";
   font-weight: 400;
   font-size: 30px;
+  margin: 8px 0 8px 0;
 }
 
 h3 {
   font-family: "Open Sans Semibold";
   font-weight: 200;
   font-size: 18px;
+  margin: 4px 0 4px 0;
 }
 
 h4 {
   font-family: "Open Sans Semibold";
   font-weight: 600;
   font-size: 16px;
+  margin: 8px 0 8px 0;
 }
 
 p,
@@ -65,6 +46,7 @@ a,
 li {
   font-family: "Open Sans";
   font-size: 14px;
+  margin: 8px 0 8px 0;
 }
 
 a {
@@ -85,11 +67,28 @@ br {
   display: block;
 }
 
+span {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 14px;
+  margin: 8px 0 8px 0;
+}
+
+hr {
+  margin: 16px 0 16px 0;
+}
+
 .listLink {
   font-family: "MS Sans Serif";
   font-size: 12px;
+  gap: 8px;
 }
+
 .listLink:hover {
+  font-family: "MS Sans Serif";
+  font-size: 12px;
+  gap: 8px;
+  text-decoration: none;
   box-shadow: none;
 }
 
@@ -97,4 +96,11 @@ br {
   font-family: "Open Sans";
   font-size: 14px;
   font-style: italic;
+}
+
+.fullWidthImage {
+  height: 250px;
+  width: 250px;
+  top: 0;
+  left: 0;
 }

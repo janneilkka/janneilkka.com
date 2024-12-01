@@ -5,7 +5,7 @@ body,
   margin: 0;
   overflow: hidden;
   background-color: transparent !important;
-  background-image: url("bgnd.png");
+  background-image: url("../src/assets/bgnd.png");
   background-size: cover;
   letter-spacing: 0.3px;
   line-height: 1.6;
