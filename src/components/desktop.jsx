@@ -4,15 +4,7 @@ import Janne_pixelated from "../assets/janne_pixelated.png";
 import Shortcuts from "./desktopIcons";
 import * as S from "./layoutStyling";
 import "./styles.scss";
-import {
-  Shell3236,
-  User,
-  CdMusic,
-  Progman34,
-  Textchat,
-  Explorer103,
-  Awfxcg321303,
-} from "@react95/icons";
+import { Shell3236, User, CdMusic, Progman34, Textchat, Explorer103, Awfxcg321303 } from "@react95/icons";
 import Portfolio from "./portfolio";
 import CV from "./cv";
 import Tunes from "./tunes";
@@ -22,27 +14,14 @@ import Paint from "./paint";
 import useModal from "./useModal";
 
 function Desktop() {
-  const [showAboutModal, handleOpenAboutModal, handleCloseAboutModal] =
-    useModal(true);
-  const [showSkillsModal, handleOpenSkillsModal, handleCloseSkillsModal] =
-    useModal(false);
-  const [showPhotoModal, handleOpenPhotoModal, handleClosePhotoModal] =
-    useModal(false);
-  const [
-    showVaporwaveModal,
-    handleOpenVaporwaveModal,
-    handleCloseVaporwaveModal,
-  ] = useModal(false);
-  const [
-    showPortfolioModal,
-    handleOpenPortfolioModal,
-    handleClosePortfolioModal,
-  ] = useModal(false);
+  const [showAboutModal, handleOpenAboutModal, handleCloseAboutModal] = useModal(true);
+  const [showSkillsModal, handleOpenSkillsModal, handleCloseSkillsModal] = useModal(false);
+  const [showPhotoModal, handleOpenPhotoModal, handleClosePhotoModal] = useModal(false);
+  const [showVaporwaveModal, handleOpenVaporwaveModal, handleCloseVaporwaveModal] = useModal(false);
+  const [showPortfolioModal, handleOpenPortfolioModal, handleClosePortfolioModal] = useModal(false);
   const [showCVModal, handleOpenCVModal, handleCloseCVModal] = useModal(false);
-  const [showTunesModal, handleOpenTunesModal, handleCloseTunesModal] =
-    useModal(false);
-  const [showPaintModal, handleOpenPaintModal, handleClosePaintModal] =
-    useModal(false);
+  const [showTunesModal, handleOpenTunesModal, handleCloseTunesModal] = useModal(false);
+  const [showPaintModal, handleOpenPaintModal, handleClosePaintModal] = useModal(false);
 
   const socialMedia = [
     {
@@ -57,13 +36,13 @@ function Desktop() {
     },
     {
       id: 2,
-      name: "Instagram",
-      url: "https://instagram.com/janne.ilkka",
+      name: "Bluesky",
+      url: "https://bsky.app/profile/janne-koivisto.bsky.social",
     },
     {
       id: 3,
-      name: "Spotify",
-      url: "https://open.spotify.com/user/rogergregor",
+      name: "Mastodon",
+      url: "https://mastodon.social/@jannekoivisto",
     },
   ];
 
@@ -86,9 +65,7 @@ function Desktop() {
                     href={url}
                     key={id}
                   >
-                    <List.Item className={`${Cursor.Pointer} listLink`}>
-                      {name}
-                    </List.Item>
+                    <List.Item className={`${Cursor.Pointer} listLink`}>{name}</List.Item>
                   </a>
                 ))}
               </List>
@@ -167,11 +144,17 @@ function Desktop() {
         <S.styledModal
           title={"janne_compressed_for_web.jpeg"}
           titleBarOptions={
-            <TitleBar.Close onClick={handleClosePhotoModal} key="close" />
+            <TitleBar.Close
+              onClick={handleClosePhotoModal}
+              key="close"
+            />
           }
           icon={<User variant="16x16_4" />}
         >
-          <Frame boxShadow="none" className="fullWidthImage">
+          <Frame
+            boxShadow="none"
+            className="fullWidthImage"
+          >
             <img
               src={Janne_pixelated}
               aria-hidden
@@ -188,21 +171,19 @@ function Desktop() {
           width={340}
           title="My_Alter_Ego.doc"
           titleBarOptions={[
-            <TitleBar.Close onClick={handleCloseVaporwaveModal} key="close" />,
+            <TitleBar.Close
+              onClick={handleCloseVaporwaveModal}
+              key="close"
+            />,
           ]}
         >
-          <S.styledModalFrame bg="white" boxShadow="$in">
+          <S.styledModalFrame
+            bg="white"
+            boxShadow="$in"
+          >
             <h1>A Vaporwave Album</h1>
-            <p>
-              In 2018 I took part in a workshop in Lithuania at the Vilnius Art
-              Academy in producing a Vaporwave Album with participants coming in
-              from around Europe.
-            </p>
-            <p>
-              Over the course of the weekend we produced music videos, songs and
-              more. I produced two songs for the album and a music video. The
-              album can be found on streaming services.
-            </p>
+            <p>In 2018 I took part in a workshop in Lithuania at the Vilnius Art Academy in producing a Vaporwave Album with participants coming in from around Europe.</p>
+            <p>Over the course of the weekend we produced music videos, songs and more. I produced two songs for the album and a music video. The album can be found on streaming services.</p>
             <a
               className={Cursor.Pointer}
               target="_blank"
@@ -210,7 +191,11 @@ function Desktop() {
             >
               The album on Spotify
             </a>
-            <hr color="gray" align="left" width="100%" />
+            <hr
+              color="gray"
+              align="left"
+              width="100%"
+            />
             <div>
               <iframe
                 src="https://www.youtube.com/embed/7SyxEF-QG_M"
@@ -224,9 +209,7 @@ function Desktop() {
           </S.styledModalFrame>
         </S.styledModal>
       )}
-      {showPortfolioModal && (
-        <Portfolio closePortfolio={handleClosePortfolioModal} />
-      )}
+      {showPortfolioModal && <Portfolio closePortfolio={handleClosePortfolioModal} />}
       {showCVModal && <CV closeCV={handleCloseCVModal} />}
       {showTunesModal && <Tunes closeTunes={handleCloseTunesModal} />}
       {showPaintModal && <Paint closePaint={handleClosePaintModal} />}
